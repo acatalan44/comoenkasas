@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🎯 ETIQUETAS SEO ESENCIALES -->
+    <title>Como en Kasas | Comida Casera para Llevar en Alcalá de Henares</title>
+    <meta name="description" content="La mejor comida casera tradicional a diario en Alcalá de Henares. Menú del día, guisos tradicionales y bocadillos. ¡Encarga y recoge sin esperas!">
+    <meta name="keywords" content="comida casera alcala de henares, comida para llevar alcala, menu del dia alcala de henares, como en kasas, comida a domicilio alcala">
+
+    <!-- 📱 ETIQUETAS OPEN GRAPH -->
+    <meta property="og:title" content="Como en Kasas | Comida Casera en Alcalá de Henares">
+    <meta property="og:description" content="Platos caseros tradicionales elaborados cada mañana. Consulta nuestra carta en directo y haz tu pedido.">
+    <meta property="og:image" content="https://acatalan44.github.io/comoenkasas/imágenes/logotipo.jpg">
+    <meta property="og:url" content="https://comoenkasas.es">
+    <meta property="og:type" content="restaurant">
+
+    <!-- 🤖 MARCADO DE ESQUEMA JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Como en Kasas",
+      "image": "https://acatalan44.github.io/comoenkasas/imágenes/logotipo.jpg",
+      "@id": "https://comoenkasas.es",
+      "url": "https://comoenkasas.es",
+      "telephone": "+34659418830",
+      "priceRange": "$",
+      "servesCuisine": "Spanish, Home-made, Casera",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Alejo Carpentier 13",
+        "addressLocality": "Alcalá de Henares",
+        "addressRegion": "Madrid",
+        "postalCode": "28806",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.520286,
+        "longitude": -3.344445
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "10:30",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "11:00",
+          "closes": "16:00"
+        }
+      ],
+      "menu": "https://comoenkasas.es/#cat-sugerencia",
+      "acceptsReservations": "false"
+    }
+    </script>
+
+    <style>
+        /* 🎨 PALETA GASTRONÓMICA PREMIUM CON TU COLOR CORPORATIVO #52706f */
+        :root {
+            --forest: #52706f;         /* Tu Color Base Puro */
+            --forest-light: #648584;   /* Variante viva para hovers */
+            --forest-dark: #3a4f4e;    /* Variante de alto contraste oscuro para cabeceras/footers */
+            --forest-soft: #f0f5f4;    /* Variante sutil clara para fondos limpios */
+            --clay: #a16207;          
+            --clay-light: #fef8e7;    
+            --dark: #1f2937;          
+            --light-bg: #f5f5f4;      
+            --card-bg: #ffffff;
+            --border-card: #cbd5e1;   
+            --text-muted: #6b7280;
+            --radius: 6px;            
+            --tgtg-green: #006653;     /* Verde original de la marca TGTG */
+        }
+
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            padding-top: 110px; 
+        }
+
+        .page-container {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: var(--light-bg);
+            min-height: 100vh;
+        }
+
+        /* 🛒 CARRITO SUPERIOR FLOTANTE DESTACADO EN BLANCO LUMINOSO */
+        .cart-sticky-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: #ffffff;
+            color: var(--forest-dark);
+            padding: 12px 20px;
+            box-shadow: 0 4px 15px rgba(82, 112, 111, 0.15);
+            border-bottom: 3px solid var(--forest);
+        }
+
+        .cart-flex {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        /* CÁPSULA INTERACTIVA DEL CONTADOR CON CURSOR DE ACCIÓN EN DESPLEGABLE */
+        .badge-count-pill {
+            background-color: var(--forest-soft);
+            color: var(--forest-dark);
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--forest-light);
+            font-size: 13px;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        .badge-count-pill:hover { background-color: #e2eceb; }
+
+        .badge-total-pill {
+            background-color: var(--forest);
+            color: #ffffff;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(82, 112, 111, 0.2);
+        }
+
+        /* BOTÓN ENLACE DE NAVEGACIÓN INTERNA AL APARTADO DE RECOGIDAS */
+        .cart-checkout-link {
+            background-color: var(--clay);
+            color: #ffffff !important;
+            text-decoration: none !important;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 13px;
+            margin-left: 10px;
+            box-shadow: 0 2px 5px rgba(161, 98, 7, 0.2);
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .cart-checkout-link:hover {
+            background-color: #8c4f02;
+            transform: scale(1.03);
+        }
+
+        /* ELEMENTOS DEL DESPLEGABLE DEL CARRITO MINI */
+        .cart-dropdown-panel {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 450px;
+            background-color: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border: 1px solid var(--border-card);
+            border-radius: 0 0 6px 6px;
+            padding: 15px;
+            z-index: 999;
+            text-align: left;
+        }
+        .cart-dropdown-panel.open { display: block; }
+        .cart-dropdown-title { font-size: 13px; font-weight: bold; text-transform: uppercase; color: var(--forest); border-bottom: 1px solid #f3f4f6; padding-bottom: 6px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+        
+        .cart-items-scroller { max-height: 220px; overflow-y: auto; }
+        .cart-dropdown-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; font-size: 13px; border-bottom: 1px dashed #f3f4f6; color: var(--dark); }
+        .cart-dropdown-row span strong { color: var(--forest-dark); }
+        
+        .btn-clear-cart { background: none; border: none; color: #dc2626; font-size: 11px; font-weight: bold; cursor: pointer; text-decoration: underline; padding: 0; }
+        .btn-clear-cart:hover { color: #991b1b; }
+
+        /* BARRA DE CATEGORÍAS FIJA - 👑 SEPARACIÓN EN ORDENADORES CORREGIDA A 55PX */
+        .categories-nav-bar {
+            position: fixed;
+            top: 55px; left: 0; right: 0;
+            z-index: 990;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 8px 10px;
+            overflow-x: auto;
+            white-space: nowrap;
+            text-align: center;
+        }
+        .categories-nav-bar::-webkit-scrollbar { display: none; }
+
+        .nav-cat-btn {
+            display: inline-block;
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            margin: 0 4px;
+            border-radius: 20px;
+            background: #f3f4f6;
+            transition: all 0.2s ease;
+        }
+        .nav-cat-btn:hover { background: var(--forest); color: white; }
+
+        .order-callout-bar { background: #ffffff; text-align: center; padding: 14px; border-bottom: 1px solid #e5e7eb; margin-top: -10px; }
+        .lnk-go-order { font-family: 'Georgia', serif; font-style: italic; font-size: 18px; color: var(--clay); text-decoration: none; font-weight: bold; transition: color 0.2s; }
+        .lnk-go-order:hover { color: var(--forest); }
+
+        /* 🎞️ CONTENEDOR MAESTRO DEL CARRUSEL DINÁMICO DE LA CABECERA */
+        .hero-header-carousel {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .carousel-bg-wrapper {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: imageFadeLoop 16s infinite ease-in-out;
+        }
+
+        .slide-1 { background-image: url('imágenes/cabecera_2.jpg'); animation-delay: 0s; }
+        .slide-2 { background-image: url('imágenes/cabecera_3.jpg'); animation-delay: 4s; }
+        .slide-3 { background-image: url('imágenes/cabecera_4.jpg'); animation-delay: 8s; }
+        .slide-4 { background-image: url('imágenes/cabecera_5.jpg'); animation-delay: 12s; }
+
+        @keyframes imageFadeLoop {
+            0% { opacity: 0; }
+            6% { opacity: 1; }
+            25% { opacity: 1; }
+            31% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55));
+            z-index: 2;
+        }
+
+        .carousel-content-fixed {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .logo-centered-wrap { margin-bottom: 12px; }
+        .logo-official-img { height: 85px; width: auto; object-fit: contain; display: inline-block; }
+
+        .carousel-content-fixed h1 {
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 2px;
+        }
+
+        .carousel-content-fixed p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* 📞 PRIMERA LÍNEA INFERIOR (COLOR CORPORATIVO SÓLIDO PREMIUM) */
+        .quick-contact-bar {
+            background-color: var(--forest);
+            color: #ffffff;
+            padding: 16px 20px;
+            font-size: 13.5px;
+            border-bottom: 1px solid var(--forest-dark);
+        }
+
+        .flex-row-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .item-block { display: flex; align-items: center; gap: 8px; }
+        .icon-white-filter { filter: brightness(0) invert(1); display: inline-block; }
+
+        /* SEPARACIÓN DE LA PRIMERA LÍNEA INFERIOR SOLICITADA POR TU JEFE */
+        .phone-margin-right {
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        .wa-mini-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #25d366;
+            color: white !important;
+            text-decoration: none !important;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        /* 🕒 SEGUNDA LÍNEA INFERIOR ADAPTADA (FONDO BLANCO PREMIUM LIGERO) */
+        .quick-status-bar-white {
+            background-color: #ffffff;
+            color: var(--forest);
+            padding: 16px 20px;
+            font-size: 13.5px;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .status-badge-premium {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12.5px;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 4px;
+            color: var(--dark);
+            background-color: var(--forest-soft);
+            border: 1px solid var(--border-card);
+        }
+
+        .status-badge-premium .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+        .status-badge-premium.badge-open .status-dot { background-color: #22c55e; box-shadow: 0 0 8px #22c55e; animation: blinkDot 1.5s infinite; }
+        .status-badge-premium.badge-closed .status-dot { background-color: #ef4444; }
+
+        @keyframes blinkDot { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }
+
+        .link-interactive-premium {
+            color: var(--forest);
+            text-decoration: underline;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 13.5px;
+            font-family: inherit;
+            font-weight: 600;
+        }
+        .link-interactive-premium:hover { color: var(--forest-dark); }
+
+        .dropdown-hours { position: relative; display: inline-block; }
+        .dropdown-trigger { background: none; border: none; font-size: 13.5px; font-weight: bold; color: var(--forest); cursor: pointer; display: flex; align-items: center; gap: 4px; font-family: inherit; }
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background-color: white; min-width: 210px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); border-radius: 6px; padding: 12px; z-index: 100; border: 1px solid #cbd5e1; color: var(--dark); margin-top: 5px; text-align: left; }
+        .dropdown-hours:hover .dropdown-content { display: block; }
+        .hours-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 12px; border-bottom: 1px solid #f3f4f6; color: var(--dark); }
+        .hours-row.sunday { font-weight: bold; color: var(--clay); }
+
+        .content-section { padding: 25px 15px; }
+        .block-card { background: var(--card-bg); border: 1px solid var(--forest); border-radius: var(--radius); padding: 20px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .block-card h2, .block-card h3 { font-family: 'Georgia', serif; font-size: 24px; color: var(--forest); font-weight: 800; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 3px solid var(--clay); }
+
+        /* 🔗 ENLACE INFORMATIVO NORMATIVA ALÉRGENOS CON FONDO CORPORATIVO SUAVE */
+        .allergens-legal-banner { text-align: center; margin-bottom: 20px; background-color: var(--forest-soft); border: 1px dashed var(--forest); padding: 10px; border-radius: 4px; }
+        .allergens-modal-btn { background: none; border: none; padding: 12px 16px; cursor: pointer; font-family: inherit; display: flex; align-items: center; justify-content: center; gap: 12px; text-align: left; width: 100%; }
+        .allergens-banner-img { height: 32px; width: auto; object-fit: contain; flex-shrink: 0; }
+        .allergens-banner-text-main { font-size: 15px; font-weight: 700; color: var(--forest); text-decoration: underline; }
+        .allergens-banner-text-sub { font-size: 12.5px; color: var(--forest-dark); font-weight: 600; }
+        .allergens-modal-btn:hover .allergens-banner-text-main { color: var(--clay); }
+
+        .order-section-title { background: var(--forest); color: white; text-align: center; padding: 14px; font-family: 'Georgia', serif; font-size: 18px; font-weight: normal; letter-spacing: 0.5px; margin-top: 15px; }
+        .order-channels-box { background: #ffffff; border: 1px solid #cbd5e1; padding: 24px; border-top: none; margin-bottom: 25px; }
+        .channels-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .channel-card { background: #fafafa; border: 1px solid #e5e7eb; padding: 20px; border-radius: var(--radius); text-align: center; display: flex; flex-direction: column; justify-content: flex-start; }
+        .channel-card h4 { font-size: 17px; text-transform: uppercase; margin-bottom: 6px; color: var(--forest); font-weight: 800; }
+
+        /* NUEVOS ESTILOS PARA EL BLOQUE INLINE DE TGTG */
+        .tgtg-inline-block { margin-top: 25px; padding-top: 20px; border-top: 1px dashed #cbd5e1; display: flex; align-items: center; gap: 15px; text-align: left; text-decoration: none; transition: transform 0.2s ease; }
+        .tgtg-inline-block:hover { transform: translateY(-2px); }
+        .tgtg-inline-text h5 { font-size: 15px; color: var(--dark); margin-bottom: 2px; text-transform: uppercase; font-weight: 800; }
+        .tgtg-inline-text h5 span { font-size: 11.5px; color: var(--text-muted); font-weight: normal; }
+        .tgtg-inline-text h6 { font-size: 13.5px; color: var(--clay); font-style: italic; margin-bottom: 6px; font-weight: 700; }
+        .tgtg-inline-text p { font-size: 12.5px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+        .tgtg-inline-logo { width: 85px; height: 85px; object-fit: contain; border-radius: 6px; flex-shrink: 0; }
+
+
+        .delivery-logos-container { display: flex; justify-content: space-around; align-items: center; gap: 10px; margin-top: 14px; padding: 5px 0; }
+        .delivery-link-img { display: inline-block; transition: transform 0.2s ease; flex: 1; max-width: 75px; }
+        .delivery-link-img:hover { transform: scale(1.08); }
+        .delivery-link-img img { width: 100%; height: auto; object-fit: contain; display: block; }
+
+        .time-picker-wrapper { margin: 12px 0 4px 0; text-align: left; background: #ffffff; border: 1px solid #cbd5e1; padding: 10px; border-radius: 4px; }
+        .time-picker-wrapper label { font-size: 12.5px; font-weight: 700; color: var(--dark); display: block; margin-bottom: 5px; }
+        .select-time-input { width: 100%; padding: 8px; font-size: 13.5px; border-radius: 4px; border: 1px solid #cbd5e1; font-family: inherit; color: var(--dark); background-color: #fafafa; }
+
+        .btn-action { display: block; padding: 11px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 12.5px; text-transform: uppercase; margin-top: 12px; text-align: center; }
+        .btn-whatsapp { background: #25d366; color: white; }
+
+        /* NUEVOS ESTILOS PARA EL BOTÓN DE CORREO Y HOVERS */
+        .btn-whatsapp:hover { background: #1ebd59; }
+        .btn-correo { background: var(--forest); color: white; }
+        .btn-correo:hover { background: var(--forest-dark); }
+        .btn-correo:disabled { opacity: 0.6; cursor: not-allowed; }
+        /* 🛒 HIGHLIGHT TEXTO "tu carrito" */
+        .highlight-cart-text { background-color: #fef08a; padding: 1px 4px; border-radius: 3px; font-weight: 700; color: #1b3328; }
+
+        .store-preview-box { background: var(--clay-light); border: 2px solid var(--clay); border-radius: var(--radius); padding: 16px 24px; margin-bottom: 25px; display: flex; align-items: center; gap: 24px; box-shadow: 0 4px 15px rgba(161, 98, 7, 0.08); }
+        .store-thumb { width: 100px; height: 100px; object-fit: cover; border-radius: 6px; border: 2px solid #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.1); flex-shrink: 0; }
+        .store-preview-text { font-family: 'Georgia', serif; font-size: 18px; color: #451a03; font-weight: 700; line-height: 1.3; }
+        .store-preview-sub { display: block; font-family: 'Segoe UI', sans-serif; font-size: 13.5px; color: #7c2d12; font-weight: 600; margin-top: 5px; }
+
+        .items-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+        .menu-item { display: flex; align-items: flex-start; gap: 12px; padding: 14px; background: #ffffff; border: 1px solid #e4e4e7; border-radius: 6px; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; }
+        .menu-item:not(.out-of-stock):hover, .sugerencia-hover-block:not(.out-of-stock):hover { transform: translateY(-2px); border-color: var(--forest); background-color: #fafaf9; box-shadow: 0 6px 14px rgba(82, 112, 111, 0.08); }
+
+        .sugerencia-hover-block { border: 1px solid transparent; border-radius: 6px; padding: 10px; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; }
+
+        .menu-item.out-of-stock { opacity: 0.55; background-color: #fcfcfc; border-color: #e4e4e7; }
+        .menu-item.out-of-stock .menu-item-thumb { filter: grayscale(100%); }
+
+        .menu-item-thumb { width: 75px; height: 75px; object-fit: cover; border-radius: 4px; background-color: #e5e5e5; border: 1px solid #d6d3d1; flex-shrink: 0; }
+        .menu-item-main { flex: 1; display: flex; flex-direction: column; min-height: 75px; justify-content: space-between; }
+        .menu-item-name { font-weight: 700; font-size: 14px; color: #111827; }
+        .menu-item-desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; margin-bottom: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        
+        .item-allergens-wrap { display: flex; gap: 5px; font-size: 14px; margin-bottom: 6px; margin-top: 2px; align-items: center; }
+        .menu-item-action { display: flex; align-items: center; justify-content: space-between; margin-top: auto; width: 100%; }
+        .item-price { font-weight: 700; font-size: 14px; color: var(--dark); }
+
+        .lbl-out-of-stock { font-size: 11.5px; font-weight: bold; color: #7f1d1d; background-color: #ffeeee; border: 1px solid #fca5a5; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.3px; }
+
+        .quantity-selector { display: flex; align-items: center; background: #f5f5f4; border-radius: 4px; padding: 1px; border: 1px solid #cbd5e1; }
+        .btn-qty { background: white; border: none; width: 24px; height: 24px; border-radius: 2px; font-size: 13px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .btn-qty-minus { color: #dc2626; }
+        .btn-qty-plus { color: var(--forest); }
+        .qty-value { font-size: 12px; font-weight: 700; min-width: 24px; text-align: center; }
+        
+        .btn-add { background-color: #ffffff; color: var(--forest); border: 1px solid var(--forest); padding: 4px 12px; font-size: 11.5px; font-weight: 700; border-radius: 4px; cursor: pointer; transition: all 0.1s ease; }
+        .btn-add:hover { background-color: var(--forest); color: white; }
+
+        /* INTEGRADO: ESTILOS DEL BANNER DE ATAJO SUPERIOR TOO GOOD TO GO (SIN MARCAS) */
+        .tgtg-shortcut-banner {
+            background-color: var(--forest-soft);
+            border: 2px solid var(--forest);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 10px rgba(82, 112, 111, 0.05);
+        }
+
+        .tgtg-shortcut-logo {
+            width: 80px; height: 80px; object-fit: contain; flex-shrink: 0;
+            border-radius: 8px; border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .tgtg-shortcut-content { flex: 1; }
+        .tgtg-shortcut-content h3 { font-family: 'Georgia', serif; font-size: 18px; color: var(--forest); margin-bottom: 4px; }
+        .tgtg-shortcut-content h4 { font-size: 14px; color: var(--clay); font-weight: 700; margin-bottom: 6px; }
+        .tgtg-shortcut-content p { font-size: 13px; color: var(--dark); line-height: 1.4; }
+
+        .tgtg-shortcut-link {
+            display: inline-block; background-color: var(--clay); color: #ffffff !important; text-decoration: none !important;
+            padding: 8px 16px; border-radius: 4px; font-size: 12.5px; font-weight: bold; text-transform: uppercase;
+            white-space: nowrap; box-shadow: 0 2px 4px rgba(161, 98, 7, 0.155); transition: background-color 0.2s;
+        }
+        .tgtg-shortcut-link:hover { background-color: #8c4f02; }
+
+        /* INTEGRADO: ESTILOS DEL BANNER MAESTRO INFERIOR TOO GOOD TO GO (SIN MARCAS) */
+        .tgtg-master-card {
+            background: #ffffff; border: 1px solid var(--forest); border-radius: var(--radius); padding: 24px;
+            margin-top: 40px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            scroll-margin-top: 130px; 
+        }
+
+        .tgtg-master-card h2, .tgtg-master-card h3 {
+            font-family: 'Georgia', serif; font-size: 17px; color: var(--forest); font-weight: 700;
+            margin-bottom: 16px; padding-bottom: 6px; border-bottom: 2px solid #f5f5f4;
+        }
+
+        .tgtg-master-card h4 { font-size: 14px; color: var(--clay); font-weight: 700; margin-top: 14px; margin-bottom: 6px; }
+        .tgtg-two-col-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 30px; align-items: flex-start; }
+        .tgtg-text-block p { font-size: 13.5px; color: var(--dark); line-height: 1.5; margin-bottom: 12px; }
+        
+        .tgtg-main-thumb { width: 100%; height: auto; max-height: 200px; object-fit: cover; border-radius: var(--radius); border: 1px solid #cbd5e1; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+        .tgtg-platform-desc {
+            background-color: #fafafa; border-left: 4px solid var(--forest); padding: 12px;
+            border-radius: 0 4px 4px 0; margin: 16px 0; display: flex; align-items: flex-start; gap: 12px;
+        }
+        .tgtg-mini-logo { width: 36px; height: auto; object-fit: contain; flex-shrink: 0; margin-top: 2px; }
+        .tgtg-platform-desc p { margin-bottom: 0; font-size: 13px; color: #374151; }
+
+        .tgtg-steps-list { list-style: none; margin: 12px 0; }
+        .tgtg-steps-list li { font-size: 13.5px; color: var(--dark); padding-left: 24px; position: relative; margin-bottom: 10px; line-height: 1.4; }
+        .tgtg-steps-list li::before { content: "✓"; position: absolute; left: 2px; top: 0; color: var(--forest); font-weight: bold; font-size: 14px; }
+        
+        .tgtg-inline-link { color: var(--tgtg-green); text-decoration: underline; font-weight: bold; }
+        .tgtg-inline-link:hover { color: var(--forest-dark); }
+
+        .tgtg-download-row {
+            display: flex; align-items: center; justify-content: flex-start; gap: 12px; flex-wrap: nowrap;
+            margin-top: 20px; padding-top: 15px; border-top: 1px dashed #e5e7eb; width: 100%;
+        }
+        
+        .tgtg-store-btn { display: inline-block; height: 36px; flex-shrink: 0; }
+        .tgtg-store-btn img { height: 100%; width: auto; object-fit: contain; display: block; }
+
+        .tgtg-shop-btn-outline {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: #ffffff;      
+            color: var(--tgtg-green) !important; border: 2px solid var(--tgtg-green); text-decoration: none !important;
+            padding: 8px 14px; border-radius: 4px; font-size: 12.5px; font-weight: bold; white-space: nowrap;
+            flex-shrink: 0; transition: all 0.2s ease; cursor: pointer; height: 36px; 
+        }
+        .tgtg-shop-btn-outline:hover { background-color: var(--forest-soft); border-color: var(--forest-dark); color: var(--forest-dark) !important; }
+        .tgtg-shop-btn-outline img { height: 16px; width: auto; object-fit: contain; }
+
+        /* OPINIONES Y CONTENEDOR PAGINACIÓN */
+        .opinions-layout-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 25px; margin-top: 15px; }
+        
+        /* ESTILOS EXCLUSIVOS PARA MARCAR LA NOTA NUMÉRICA EN GRANDE SEGÚN TU PROPUESTA */
+        .opinions-header-score { border: 1px solid #cbd5e1; padding: 16px 20px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: #ffffff; flex-wrap: wrap; gap: 15px; }
+        .stars-row-flex_custom { display: flex; align-items: center; gap: 4px; font-size: 20px; color: #fbbf24 !important; }
+        
+        .score-number-highlight { font-size: 19px; font-weight: bold; color: var(--clay); margin-right: 2px; }
+        .score-total-muted { font-size: 12.5px; font-weight: normal; color: var(--text-muted); margin-left: 6px; }
+
+        .single-opinion-bubble { background-color: #e5e7eb; padding: 16px; border-radius: 6px; margin-bottom: 16px; border: 1px solid #d1d5db; }
+        .single-opinion-bubble strong { font-size: 14px; color: #111827; display: block; margin-bottom: 4px; }
+        .single-opinion-bubble p { font-size: 13.5px; color: #374151; line-height: 1.4; }
+        
+        .opinions-pagination-wrap { display: flex; justify-content: center; align-items: center; gap: 14px; margin-top: 15px; padding: 5px 0; font-size: 13.5px; font-weight: 700; color: var(--dark); }
+        .pagination-nav-btn { background: none; border: none; font-size: 14px; font-weight: 800; color: var(--clay); cursor: pointer; padding: 2px 6px; transition: color 0.1s; }
+        .pagination-nav-btn:disabled { color: var(--border-card); cursor: not-allowed; }
+        .pagination-nav-btn:not(:disabled):hover { color: var(--forest); }
+
+        .input-opinion-field { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 13.5px; margin-bottom: 12px; font-family: inherit; }
+        .input-opinion-field:focus { border-color: var(--forest); outline: none; }
+        .interactive-stars-selector { display: flex; gap: 6px; margin-bottom: 16px; font-size: 24px; cursor: pointer; color: #cbd5e1; }
+        .interactive-stars-selector .star-item.selected { color: #fbbf24; }
+        
+        .btn-submit-opinion { width: 100%; padding: 12px; background-color: var(--forest); color: white; border: none; border-radius: 4px; font-size: 14px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; }
+        .btn-submit-opinion:hover { background-color: var(--forest-dark); }
+
+        .master-faq-trigger-btn { width: 100%; background-color: var(--forest-soft); border: 2px solid var(--forest); color: var(--forest); font-size: 15.5px; font-weight: bold; padding: 14px 20px; text-align: left; border-radius: var(--radius); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 10px rgba(82, 112, 111, 0.04); transition: all 0.2s ease; }
+        .master-faq-trigger-btn:hover { background-color: #fef08a; color: var(--forest-dark); border-color: var(--forest-dark); }
+        .master-faq-inner-wrapper { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease; padding: 0 10px; }
+        .block-card.faq-master-opened .master-faq-inner-wrapper { max-height: 3500px; padding: 15px 10px 5px 10px; }
+        .master-faq-icon { font-size: 13px; transition: transform 0.3s ease; }
+        .block-card.faq-master-opened .master-faq-icon { transform: rotate(180deg); }
+
+        .faq-item-row { border-bottom: 1px solid #e5e7eb; padding: 12px 5px; }
+        .faq-item-row:last-child { border-bottom: none; }
+        .faq-trigger-title { width: 100%; background: none; border: none; text-align: left; font-size: 14.5px; font-weight: 700; color: var(--forest); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: inherit; padding: 4px 0; }
+        .faq-trigger-title:hover { color: var(--clay); }
+        .faq-icon-indicator { font-size: 12px; color: var(--text-muted); transition: transform 0.2s ease; }
+        .faq-item-row.active .faq-icon-indicator { transform: rotate(180deg); color: var(--clay); }
+        .faq-content-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease-out, padding 0.25s ease; font-size: 13.5px; color: #374151; line-height: 1.5; padding: 0; }
+        .faq-item-row.active .faq-content-answer { max-height: 300px; padding-top: 8px; padding-bottom: 4px; }
+
+        .allergen-legend-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+        .allergen-legend-table th { background-color: var(--forest); color: white; padding: 8px; text-align: left; }
+        .allergen-legend-table td { padding: 8px; border-bottom: 1px solid #e5e7eb; vertical-align: middle; }
+        .allergen-legend-table tr:hover { background-color: #fafafa; }
+        .allergen-icon-cell { font-size: 16px; text-align: center; }
+
+        /* PIE DE PÁGINA REDISEÑADO WITH BASE OSCURA CORPORATIVO */
+        .main-footer { background: var(--forest-dark); color: #9ca3af; padding: 40px 20px; border-top: 3px solid var(--clay); }
+        .footer-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; max-width: 1000px; margin: 0 auto; font-size: 13.5px; }
+        
+        .footer-section h2 { color: white; font-size: 14px; text-transform: uppercase; margin-bottom: 18px; letter-spacing: 0.5px; border-bottom: none; padding-bottom: 0; font-weight: 700; }
+        .footer-section p { margin-bottom: 10px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+        
+        .btn-footer-wa {
+            display: inline-flex; align-items: center; gap: 5px; background-color: #25d366; color: white !important;
+            text-decoration: none !important; padding: 5px 12px; border-radius: 4px; font-size: 11px; font-weight: bold;
+            margin-top: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+        .btn-footer-wa:hover { background-color: #1ebd59; }
+
+        .main-footer .maps-link { color: #ffffff !important; text-decoration: underline; background: none; border: none; font-size: 13.5px; font-family: inherit; cursor: pointer; font-weight: 600; padding: 0; }
+        .main-footer .maps-link:hover { color: #cbd5e1 !important; }
+
+        .form-row-parallel { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 14px; }
+        .form-group { margin-bottom: 14px; }
+        .form-group label { display: block; color: white; font-size: 13.5px; margin-bottom: 5px; font-weight: 600; }
+        .form-control { width: 100%; padding: 10px; border: none; border-radius: 3px; font-size: 14px; background-color: #ffffff; color: var(--dark); }
+        textarea.form-control { resize: vertical; min-height: 110px; }
+        .form-checkbox-label { display: flex; align-items: flex-start; gap: 10px; color: white; font-size: 13px; cursor: pointer; margin-top: 15px; margin-bottom: 20px; }
+        .form-checkbox-label input { margin-top: 3px; width: 16px; height: 16px; cursor: pointer; }
+        .form-checkbox-label button { background: none; border: none; color: #93c5fd; text-decoration: underline; font-size: 13px; font-family: inherit; cursor: pointer; padding: 0; }
+        .btn-submit-form { width: 100%; padding: 12px; background-color: #000000; color: white; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.2s, opacity 0.2s; }
+        .btn-submit-form:disabled { opacity: 0.4; cursor: not-allowed; }
+
+        /* Contraste estético del mensaje de correo */
+        .status-message { margin-top: 15px; padding: 12px; border-radius: 4px; font-size: 14px; font-weight: 700; text-align: center; display: none; }
+        .status-message.success { background-color: #d1fae5; color: #1b4332; border: 2px solid #34d399; }
+
+        .footer-bottom { text-align: center; margin-top: 40px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 11px; opacity: 0.6; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 8px; }
+        .btn-legal-popup-trigger { background: none; border: none; color: #9ca3af; text-decoration: underline; font-size: 11px; cursor: pointer; opacity: 0.8; font-family: inherit; }
+        .btn-legal-popup-trigger:hover { color: white; }
+
+        .map-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); z-index: 2000; align-items: center; justify-content: center; padding: 20px; }
+        .map-modal.open { display: flex; }
+        .modal-body { background: white; width: 100%; max-width: 600px; border-radius: var(--radius); padding: 15px; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .modal-body.legal-large-body { max-width: 750px; }
+        .modal-close { position: absolute; top: -15px; right: -15px; background: var(--dark); color: white; border: none; width: 30px; height: 30px; border-radius: 50%; font-weight: bold; cursor: pointer; z-index: 2100; }
+        
+        .legal-scroller-content { max-height: 450px; overflow-y: auto; padding-right: 10px; font-size: 13px; color: #374151; text-align: left; line-height: 1.6; }
+        .legal-scroller-content h2 { font-size: 16px; color: var(--forest); margin-top: 18px; margin-bottom: 8px; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+        .legal-scroller-content h3 { font-size: 14px; color: var(--dark); margin-top: 14px; margin-bottom: 4px; }
+        .legal-scroller-content p { margin-bottom: 10px; }
+        .legal-scroller-content ul { margin-left: 20px; margin-bottom: 10px; }
+
+        .scroll-top-btn {
+            position: fixed; bottom: 25px; right: 25px; background-color: var(--forest); color: white; 
+            border: 1px solid rgba(255, 255, 255, 0.2); width: 44px; height: 44px; border-radius: 50%; 
+            font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; 
+        }
+        .scroll-top-btn.show { opacity: 1; visibility: visible; }
+        .scroll-top-btn:hover { background-color: var(--forest-dark); transform: scale(1.05); }
+
+        /* 👑 REGLAS DE ADAPTACIÓN MÓVIL (MEDIA QUERIES) PERFECCIONADAS */
+        @media (max-width: 768px) {
+            .items-grid, .channels-grid, .footer-grid, .opinions-layout-grid { grid-template-columns: 1fr; }
+            .form-row-parallel { grid-template-columns: 1fr; gap: 0; }
+            .menu-item:hover, .sugerencia-hover-block:hover { transform: none; box-shadow: none; }
+            .store-preview-box { flex-direction: column; text-align: center; padding: 20px; gap: 15px; }
+            
+            /* 👑 RESCATE DE PESTAÑAS: Aumentamos el padding superior general para empujar el carrusel */
+            body { padding-top: 150px; }
+            
+            /* RESCATE DE PESTAÑAS - 👑 SEPARACIÓN EN MÓVILES AJUSTADA A 96PX PARA TRABAJAR EN SINTONÍA CON EL ESCRITORIO */
+            .categories-nav-bar { 
+                top: 96px !important; 
+                padding: 10px 6px !important;
+            }
+
+            .footer-grid { text-align: center; gap: 40px; }
+            .footer-section p { justify-content: center; }
+            .delivery-logos-container { max-width: 260px; margin: 14px auto 0 auto; }
+            .modal-body { padding: 12px; }
+            
+            /* Corrección del bloque maestro del desperdicio alimentario */
+            .tgtg-shortcut-banner { flex-direction: column; text-align: center; padding: 16px; }
+            .tgtg-shortcut-link { width: 100%; }
+            .tgtg-two-col-layout { grid-template-columns: 1fr; gap: 20px; }
+            .tgtg-main-thumb { max-height: 180px; } 
+            
+            /* Obligamos a los botones de descarga a saltar de línea y centrarse sin desbordar */
+            .tgtg-download-row { 
+                flex-wrap: wrap !important; 
+                justify-content: center !important; 
+                gap: 12px !important; 
+            }
+            .tgtg-shop-btn-outline { width: 100% !important; text-align: center; justify-content: center; }
+            
+            /* Ajuste del tamaño máximo del desplegable del carrito flotante en móviles */
+            .cart-dropdown-panel { max-width: 92%; }
+        }
+
+
+
+
+/* =========================================================
+           REDISEÑO PREMIUM "COMO EN KASAS" - BLOQUE MAESTRO CSS
+           ========================================================= */
+
+        /* --- 1. CABECERA, HÉROE Y NAVEGACIÓN --- */
+        .hero-header-carousel { height: 320px !important; }
+        .carousel-content-fixed h1 { font-size: 42px !important; text-shadow: 0 4px 15px rgba(0,0,0,0.7) !important; margin-bottom: 8px !important; }
+        .carousel-content-fixed p { font-size: 16px !important; font-weight: 500 !important; text-shadow: 0 2px 10px rgba(0,0,0,0.8) !important; }
+        .logo-official-img { height: 95px !important; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4)) !important; transition: transform 0.3s ease !important; }
+        .logo-official-img:hover { transform: scale(1.05) !important; }
+        
+        .nav-cat-btn { background-color: #ffffff !important; border: 1px solid #cbd5e1 !important; color: var(--forest-dark) !important; padding: 8px 18px !important; font-size: 13px !important; box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important; margin: 0 6px !important; }
+        .nav-cat-btn:hover { background-color: var(--forest) !important; color: #ffffff !important; border-color: var(--forest) !important; transform: translateY(-2px) !important; box-shadow: 0 4px 10px rgba(82, 112, 111, 0.25) !important; }
+        
+        .categories-nav-bar { top: 68px !important; padding-top: 12px !important; padding-bottom: 12px !important; }
+        body { padding-top: 130px !important; }
+
+        /* --- 2. BARRAS DE CONTACTO, MAPAS Y ESTADO --- */
+        .wa-mini-btn { background-color: transparent !important; border: 1px solid #ffffff !important; padding: 4px 14px !important; border-radius: 20px !important; font-size: 12px !important; transition: all 0.2s ease !important; }
+        .wa-mini-btn:hover { background-color: #ffffff !important; color: var(--forest) !important; transform: scale(1.05) !important; }
+        .status-badge-premium { border-radius: 20px !important; padding: 4px 14px !important; box-shadow: 0 2px 4px rgba(0,0,0,0.03) !important; }
+        .quick-contact-bar .flex-row-center, .quick-status-bar-white .flex-row-center { gap: 25px !important; }
+        
+        .dropdown-trigger { background-color: #f8fafc !important; border: 1px solid #e2e8f0 !important; border-radius: 20px !important; padding: 6px 14px !important; transition: all 0.2s ease !important; }
+        .dropdown-trigger:hover { background-color: #f1f5f9 !important; border-color: #cbd5e1 !important; color: var(--forest-dark) !important; }
+        
+        .map-links-group { background-color: #f8fafc !important; border: 1px solid #e2e8f0 !important; border-radius: 20px !important; padding: 4px 14px !important; display: inline-flex !important; align-items: center !important; gap: 8px !important; box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important; }
+        .map-links-group .link-interactive-premium { border: none !important; padding: 2px 4px !important; color: var(--forest) !important; text-decoration: none !important; }
+        .map-links-group .link-interactive-premium:hover { color: var(--clay) !important; transform: scale(1.03) !important; }
+        .divider-pipe { width: 1px !important; height: 14px !important; background-color: #cbd5e1 !important; margin: 0 2px !important; }
+
+        /* --- 3. DISEÑO DE LA CARTA DE PLATOS --- */
+        .block-card h2, .block-card h3 { font-family: 'Georgia', serif; font-size: 24px !important; color: var(--forest) !important; font-weight: 800 !important; margin-bottom: 20px !important; padding-bottom: 8px !important; border-bottom: 3px solid var(--clay) !important; }
+        
+        .items-grid { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important; gap: 20px !important; padding: 10px !important; }
+        .menu-item { display: flex !important; flex-direction: column !important; background: #ffffff !important; border: 1px solid #e4e4e7 !important; border-radius: 12px !important; overflow: hidden !important; transition: transform 0.2s ease, box-shadow 0.2s ease !important; padding: 0 !important; }
+        .menu-item:hover { transform: translateY(-5px) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
+        .menu-item-thumb { width: 100% !important; height: 180px !important; object-fit: cover !important; border-radius: 12px 12px 0 0 !important; }
+        .menu-item-main { padding: 15px !important; display: flex !important; flex-direction: column !important; flex: 1 !important; }
+        .menu-item-name { font-weight: 700 !important; font-size: 1.1rem !important; color: #111827 !important; margin-bottom: 8px !important; }
+        .menu-item-desc { font-size: 0.9rem !important; color: #6b7280 !important; margin-bottom: 12px !important; flex: 1 !important; }
+        .menu-item-action { display: flex !important; justify-content: space-between !important; align-items: center !important; margin-top: 10px !important; width: 100% !important; }
+        .item-price { font-weight: 800 !important; font-size: 1.2rem !important; color: var(--forest) !important; }
+
+        /* Sugerencia a 2 columnas */
+        .menu-item.sugerencia-card { flex-direction: row !important; align-items: center; }
+        .menu-item.sugerencia-card .menu-item-thumb { width: 35% !important; height: 100% !important; min-height: 220px; border-radius: 12px 0 0 12px !important; }
+        .menu-item.sugerencia-card .menu-item-main { width: 65% !important; padding: 25px !important; }
+
+        /* --- 4. ZONA DE CHECKOUT (PEDIDOS) --- */
+        .order-section-title { font-size: 26px !important; font-weight: 700 !important; letter-spacing: 1px !important; padding: 20px !important; text-shadow: 0 2px 5px rgba(0,0,0,0.3) !important; }
+        #target-recogida-box { background-color: #f8fafc !important; border: 2px solid var(--forest) !important; box-shadow: 0 8px 20px rgba(82, 112, 111, 0.12) !important; }
+        .select-time-input { padding: 12px 14px !important; font-size: 14px !important; border-radius: 8px !important; border: 1px solid #cbd5e1 !important; background-color: #ffffff !important; transition: border-color 0.2s, box-shadow 0.2s !important; }
+        .select-time-input:focus { border-color: var(--forest) !important; box-shadow: 0 0 0 3px rgba(82, 112, 111, 0.2) !important; outline: none !important; }
+        .select-time-input::placeholder { font-size: 12.5px !important; }
+        .btn-action { padding: 14px !important; font-size: 14.5px !important; border-radius: 8px !important; letter-spacing: 0.5px !important; transition: transform 0.2s, box-shadow 0.2s !important; display: flex !important; align-items: center !important; justify-content: center !important; gap: 8px !important; }
+        .btn-action:hover { transform: translateY(-2px) !important; box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important; }
+        
+        .channel-card { display: flex !important; flex-direction: column !important; height: 100% !important; }
+        .tgtg-inline-block { margin-top: auto !important; padding-top: 25px !important; }
+
+        /* --- 5. BANNERS DE FILOSOFÍA Y ALÉRGENOS --- */
+        .twin-banners-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 20px !important; margin-bottom: 20px !important; }
+        .tgtg-shortcut-banner, .store-preview-box { display: flex !important; flex-direction: column !important; padding: 25px !important; height: 100% !important; border-radius: 12px !important; background-color: #ffffff !important; border: 1px solid #e2e8f0 !important; box-shadow: 0 4px 10px rgba(0,0,0,0.03) !important; text-align: center !important; }
+        .tgtg-shortcut-logo, .store-thumb { margin: 0 auto 10px auto !important; width: 70px !important; height: 70px !important; border-radius: 50% !important; }
+        .card-text-filler { flex-grow: 1 !important; display: flex !important; flex-direction: column !important; justify-content: center !important; margin-bottom: 25px !important; }
+        .twin-btn-strict { height: 55px !important; margin-top: auto !important; margin-bottom: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; box-sizing: border-box !important; width: 100% !important; }
+        .allergens-legal-banner { background-color: transparent !important; border: 1px solid #cbd5e1 !important; border-radius: 8px !important; transition: all 0.2s ease !important; }
+        .allergens-legal-banner:hover { border-color: var(--forest) !important; background-color: #f8fafc !important; }
+        .allergens-legal-banner.twin-btn-strict { margin-bottom: 0 !important; }
+
+        /* --- 6. OPINIONES, FORMS Y FOOTER --- */
+        .single-opinion-bubble { background-color: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 12px !important; box-shadow: 0 4px 10px rgba(0,0,0,0.04) !important; padding: 20px !important; position: relative !important; overflow: hidden !important; }
+        .single-opinion-bubble::before { content: '"'; position: absolute !important; top: 10px !important; right: 20px !important; font-size: 80px !important; color: #f1f5f9 !important; font-family: 'Georgia', serif !important; line-height: 1 !important; z-index: 0 !important; }
+        .single-opinion-bubble strong, .single-opinion-bubble p, .single-opinion-bubble div { position: relative !important; z-index: 1 !important; }
+        #opinionForm { background-color: var(--forest-soft) !important; padding: 25px !important; border-radius: 12px !important; border: 1px solid var(--forest) !important; box-shadow: 0 4px 15px rgba(82, 112, 111, 0.08) !important; }
+        .main-footer .form-control { border-radius: 8px !important; padding: 12px 14px !important; border: 1px solid transparent !important; transition: box-shadow 0.2s, border-color 0.2s !important; }
+        .main-footer .form-control:focus { border-color: var(--clay) !important; box-shadow: 0 0 0 3px rgba(161, 98, 7, 0.3) !important; outline: none !important; }
+
+        /* --- 7. CARRITO FLOTANTE (GLASSMORPHISM) --- */
+        .cart-sticky-header { background: rgba(255, 255, 255, 0.96) !important; backdrop-filter: blur(8px) !important; border-bottom: 2px solid var(--forest) !important; box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important; }
+        .cart-info-group { display: inline-flex !important; align-items: center !important; background-color: #f8fafc !important; border: 1px solid #cbd5e1 !important; border-radius: 30px !important; padding: 4px 6px 4px 14px !important; cursor: pointer !important; transition: all 0.2s ease !important; user-select: none !important; }
+        .cart-info-group:hover { border-color: var(--forest) !important; box-shadow: 0 4px 10px rgba(82, 112, 111, 0.15) !important; }
+        .badge-count-pill { background: transparent !important; border: none !important; padding: 0 8px !important; color: var(--dark) !important; }
+        .badge-total-pill { font-size: 15px !important; }
+        .cart-checkout-link { text-transform: uppercase !important; letter-spacing: 0.5px !important; font-size: 13.5px !important; padding: 8px 18px !important; }
+        .cart-dropdown-panel { border-radius: 12px !important; border: 1px solid #e2e8f0 !important; box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important; padding: 20px !important; margin-top: 12px !important; }
+
+        /* --- 8. RESPONSIVE MÓVIL GENERAL --- */
+        @media (max-width: 768px) {
+            .hero-header-carousel { height: 260px !important; }
+            .carousel-content-fixed h1 { font-size: 32px !important; }
+            .order-section-title { font-size: 22px !important; padding: 16px !important; }
+            .twin-banners-grid { grid-template-columns: 1fr !important; }
+            
+            /* Ajuste Menú Inferior y Carrito para Móviles */
+            .categories-nav-bar { top: 62px !important; padding: 10px 4px !important; }
+            body { padding-top: 130px !important; }
+            
+            /* Sugerencia vuelve a apilarse en móvil */
+            .menu-item.sugerencia-card { flex-direction: column !important; }
+            .menu-item.sugerencia-card .menu-item-thumb { width: 100% !important; height: 180px !important; min-height: auto; border-radius: 12px 12px 0 0 !important; }
+            .menu-item.sugerencia-card .menu-item-main { width: 100% !important; padding: 15px !important; }
+        }
+
+
+/* --- COMPRESIÓN EXTRA DE BLOQUES DE FILOSOFÍA --- */
+        .tgtg-shortcut-banner, .store-preview-box { padding: 18px 20px !important; }
+        .card-text-filler { margin-bottom: 18px !important; }
+        .tgtg-shortcut-logo, .store-thumb { margin: 0 auto 10px auto !important; width: 65px !important; height: 65px !important; }
+        .twin-btn-strict { height: 48px !important; }
+        
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+
+<!-- 🛒 CARRITO SUPERIOR REDISEÑADO -->
+    <div class="cart-sticky-header">
+        <div class="cart-flex">
+            
+            <!-- Agrupamos la info del carrito en un solo botón interactivo gigante -->
+            <div class="cart-info-group" onclick="toggleCartDropdownPanel()">
+                <span style="font-size: 16px; margin-right: 4px;">🛒</span> 
+                <span class="badge-count-pill" id="cart-counter">0 platos ▾</span> 
+                <span class="badge-total-pill" id="cart-total">0.00 €</span>
+            </div>
+            
+            <a href="#target-recogida-box" class="cart-checkout-link">✅ IR A PEDIR</a>
+            
+            <!-- PANEL DESPLEGABLE MINI CON DESGLOSE -->
+            <div id="cartDropdownPanel" class="cart-dropdown-panel">
+                <div class="cart-dropdown-title">
+                    <span>Tu selección</span>
+                    <button type="button" class="btn-clear-cart" onclick="vaciarCarritoCompleto()">🗑️ Limpiar todo</button>
+                </div>
+                <div id="cartDropdownScroller" class="cart-items-scroller">
+                    <!-- Se inyecta dinámicamente por JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORÍAS NAV -->
+    <nav class="categories-nav-bar">
+        <a href="#cat-sugerencia" class="nav-cat-btn">Sugerencia</a>
+        <a href="#cat-frios" class="nav-cat-btn">Platos Fríos</a>
+        <a href="#cat-abuela" class="nav-cat-btn">Cocina de la Abuela</a>
+        <a href="#cat-bocadillos" class="nav-cat-btn">Bocadillos</a>
+        <a href="#cat-bebidas" class="nav-cat-btn">Bebidas y Pan</a>
+        <a href="#seccion-faqs" class="nav-cat-btn" style="background-color: var(--clay-light); color: var(--clay);">Preguntas Frecuentes</a>
+    </nav>
+
+    <div class="order-callout-bar">
+        <a href="#seccion-pedido" class="lnk-go-order">Haz tu pedido: recógelo o recíbelo en tu domicilio</a>
+    </div>
+
+    <!-- 🎞️ CABECERA CARRUSEL -->
+    <header class="hero-header-carousel">
+        <div class="carousel-bg-wrapper">
+            <div class="carousel-slide slide-1"></div>
+            <div class="carousel-slide slide-2"></div>
+            <div class="carousel-slide slide-3"></div>
+            <div class="carousel-slide slide-4"></div>
+        </div>
+        <div class="carousel-overlay"></div>
+        <div class="carousel-content-fixed">
+            <div class="logo-centered-wrap">
+                <img src="imágenes/logotipo.png" alt="Como en Kasas Logotipo Oficial" class="logo-official-img">
+            </div>
+            <h1>Como en Kasas</h1>
+            <p>Comida casera tradicional elaborada a diario en Alcalá de Henares</p>
+        </div>
+    </header>
+
+    <!-- 📞 PRIMERA LÍNEA INFERIOR -->
+    <div class="quick-contact-bar">
+        <div class="flex-row-center">
+            <div class="item-inline-block">
+                <span class="phone-margin-right"><span class="icon-white-filter">📞</span> Tel: 604 983 712</span>
+                <a href="https://wa.me/34659418830" target="_blank" class="wa-mini-btn">💬 WhatsApp</a>
+            </div>
+            <div class="item-inline-block">🖈 Cl. Alejo Carpentier 13, 28806 (Alcalá de Henares)</div>
+        </div>
+    </div>
+
+    <!-- 🕒 SEGUNDA LÍNEA INFERIOR -->
+    <div class="quick-status-bar-white">
+        <div class="flex-row-center">
+            <div class="item-inline-block">
+                <span id="shop-status" class="status-badge-premium">Verificando...</span>
+            </div>
+            
+            <div class="item-inline-block dropdown-hours">
+                <button class="dropdown-trigger">🕒 Horarios ▾</button>
+                <div class="dropdown-content">
+                    <div class="hours-row"><span>Lunes:</span> <span>10:30 a 20:00</span></div>
+                    <div class="hours-row"><span>Martes:</span> <span>10:30 a 20:00</span></div>
+                    <div class="hours-row"><span>Miércoles:</span> <span>10:30 a 20:00</span></div>
+                    <div class="hours-row"><span>Jueves:</span> <span>10:30 a 20:00</span></div>
+                    <div class="hours-row"><span>Viernes:</span> <span>10:30 a 20:00</span></div>
+                    <div class="hours-row"><span>Sábado:</span> <span>10:30 a 20:00</span></div>
+                    <div class="hours-row sunday"><span>Domingo:</span> <span>11:00 a 16:00</span></div>
+                </div>
+            </div>
+
+<div class="item-inline-block map-links-group">
+             <a href="https://maps.google.com/?q=Calle+Alejo+Carpentier+13,+Alcala+de+Henares" target="_blank" class="link-interactive-premium">🧭 Cómo llegar</a>
+             <span class="divider-pipe"></span>
+             <button type="button" class="link-interactive-premium" onclick="toggleModal('mapModal', true)">📍 Ver ubicación exacta</button>
+         </div>
+
+
+        </div>
+    </div>
+
+    <main class="content-section">
+
+        <!-- CANALES DE PEDIDO -->
+        <h2 class="order-section-title" id="seccion-pedido">¿Cómo deseas hacer tu pedido?</h2>
+
+<div class="order-channels-box">
+            <div class="channels-grid">
+                
+                <!-- COLUMNA IZQUIERDA: ENTREGA A DOMICILIO + TGTG -->
+                <div class="channel-card">
+<h4>Entrega a Domicilio</h4>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-top: 4px; margin-bottom: 10px;">Tramita tu orden de entrega a domicilio a través de:</p>
+                    
+                    <!-- Logos de plataformas -->
+                    <div class="delivery-logos-container" style="margin-bottom: 15px;">
+                        <a href="https://glovoapp.com/en/es/alcala-de-henares-y-torrejon-de-ardoz/stores/como-en-kasas-alcala-de-henares-y-torrejon-de-ardoz" target="_blank" class="delivery-link-img">
+                            <img src="imágenes/logo-globo.png" alt="Pedir por Glovo">
+                        </a>
+                        <a href="https://www.just-eat.es/restaurants-como-en-kasas-alcala-de-henares/menu" target="_blank" class="delivery-link-img">
+                            <img src="imágenes/logo-justit.png" alt="Pedir por Just Eat">
+                        </a>
+                        <a href="https://www.ubereats.com/es-en/store/como-en-kasas/mBTD8gWZVHuNs4xFmu-omw?srsltid=AfmBOooQH-g_aBoUqgc1VU6MuGxCdonJ5a8Zi12oDoZytNt_IU4IAGv5" target="_blank" class="delivery-link-img">
+                            <img src="imágenes/logo-uber.png" alt="Pedir por Uber Eats">
+                        </a>
+                    </div>
+
+                    <!-- Nota legal movida debajo de los logos -->
+                    <p style="font-size: 12.5px; color: #b45309; font-weight: 600; font-style: italic; margin-top: 0; margin-bottom: 15px; padding: 0 8px; line-height: 1.3;">
+                        Nota: la relación de platos que aparecen en estas 3 plataformas pueden no coincidir con la carta que le ofrecemos en esta página.
+                    </p>
+
+                    <!-- NUEVO INJERTO: TOO GOOD TO GO -->
+                    <a href="https://www.toogoodtogo.com/es/find/alcaladehenares/comoenkasas/meal/packsorpresa-147469599487022080" target="_blank" class="tgtg-inline-block">
+                        <div class="tgtg-inline-text">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h5>Pack Sorpresa <span>(TGTG)</span></h5>
+                                <span style="font-size: 11.5px; color: var(--text-muted); font-weight: 600;">(Recogida en Tienda)</span>
+                            </div>
+                            <h6>Nada se tira, todo se aprovecha</h6>
+                            <p>Solicita tu Pack con el Excedente de comida que se ha elaborado durante el día, a precios muy reducidos.</p>
+                        </div>
+                        <img src="imágenes/too-good-to-go.jpg" alt="Logo TGTG" class="tgtg-inline-logo">
+                    </a>
+                </div>
+
+                <!-- COLUMNA DERECHA: PEDIR PARA RECOGER -->
+                <div class="channel-card" id="target-recogida-box" style="scroll-margin-top: 130px;">
+                    <h4 style="margin-bottom: 2px;">Pedir para Recoger</h4>
+                    <span style="display: block; font-size: 11px; color: var(--clay); font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px;">(Order and Pick up)</span>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-top: 0; margin-bottom: 12px;">Pasamos <span class="highlight-cart-text">tu 🛒carrito</span> a cocina para que lo recojas sin esperas.</p>
+                    
+                    <!-- Fila 1 y 2: Nombre, Teléfono y Comentarios -->
+                    <div style="text-align: left;">
+                        <div class="form-row-parallel" style="margin-bottom: 10px;">
+                            <input type="text" id="pedido-nombre" class="select-time-input" placeholder="Tu Nombre *" required style="margin-bottom: 0;">
+                            <input type="tel" id="pedido-telefono" class="select-time-input" placeholder="Tu Teléfono *" required style="margin-bottom: 0;">
+                        </div>
+                        <textarea id="pedido-comentarios" class="select-time-input" style="min-height: 50px; resize: vertical; margin-bottom: 10px;" placeholder="Comentarios (ej. Alergias / Pasa a recogerlo mi hijo / etc...)"></textarea>
+                    </div>
+
+                    <!-- Fila 3: Email y Hora fusionados -->
+                    <div class="time-picker-wrapper" style="margin: 0; padding: 12px 10px;">
+                        <div class="form-row-parallel" style="margin-bottom: 0; align-items: flex-end;">
+                            <div style="width: 100%;">
+                                <label style="font-size: 12px; font-weight: 700; color: var(--dark); display: block; margin-bottom: 4px;">Email:</label>
+                                <input type="email" id="pedido-email" class="select-time-input" placeholder="Oblig. al Encargar 'Por Correo'" style="margin-bottom: 0;">
+                            </div>
+                            <div style="width: 100%;">
+                                <label for="pickup-time-select" style="font-size: 12px; font-weight: 700; color: var(--dark); display: block; margin-bottom: 4px;">Hora de recogida:</label>
+                                <select id="pickup-time-select" class="select-time-input" style="margin-bottom: 0;">
+                                    <option value="11:30 a 12:00 h">De 11:30 a 12:00 h</option>
+                                    <option value="12:00 a 12:30 h">De 12:00 a 12:30 h</option>
+                                    <option value="12:30 a 13:00 h">De 12:30 a 13:00 h</option>
+                                    <option value="13:00 a 13:30 h">De 13:00 a 13:30 h</option>
+                                    <option value="13:30 a 14:00 h" selected>De 13:30 a 14:00 h (Pico almuerzos)</option>
+                                    <option value="14:00 a 14:30 h">De 14:00 a 14:30 h</option>
+                                    <option value="14:30 a 15:00 h">De 14:30 a 15:00 h</option>
+                                    <option value="15:00 a 15:30 h">De 15:00 a 15:30 h</option>
+                                    <option value="15:30 a 16:00 h">De 15:30 a 16:00 h</option>
+                                    <option value="16:00 a 17:30 h">De 16:00 a 17:30 h</option>
+                                    <option value="17:30 a 18:30 h">De 17:30 a 18:30 h</option>
+                                    <option value="18:30 a 20:00 h">De 18:30 a 20:00 h</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row-parallel" style="margin-top: 12px; gap: 10px;">
+                        <button type="button" class="btn-action btn-whatsapp" onclick="enviarPedidoWhatsApp()">💬 Pedir por WhatsApp</button>
+                        <button type="button" id="btn-pedido-correo" class="btn-action btn-correo" onclick="enviarPedidoCorreo()">✉️ Pedir por Correo</button>
+
+                    </div>
+
+                    <form id="pedidoHiddenForm" style="display:none;" method="POST" target="hidden_iframe_pedido" 
+                          action="https://script.google.com/macros/s/AKfycbxnDfoaiahO_JPt6MO3sghzCT9MKuSuO16wrqdQyhmo45VpFXtMzg4ejwNZNWh--X8/exec">
+                        <input type="hidden" name="nombre" id="h-pedido-nombre">
+                        <input type="hidden" name="telefono" id="h-pedido-telefono">
+                        <input type="hidden" name="email" id="h-pedido-email">
+                        <input type="hidden" name="comentarios" id="h-pedido-comentarios">
+                        <input type="hidden" name="hora" id="h-pedido-hora">
+                        <input type="hidden" name="ticketID" id="h-pedido-ticketID">
+                        <input type="hidden" name="detallePedido" id="h-pedido-detalle">
+                        <input type="hidden" name="total" id="h-pedido-total">
+                        <!-- NUEVOS CAMPOS PARA EXCEL -->
+                        <input type="hidden" name="canal" id="h-pedido-canal">
+                        <input type="hidden" name="pedidoExcel" id="h-pedido-excel">
+                    </form>
+
+                    <iframe name="hidden_iframe_pedido" id="hidden_iframe_pedido" style="display:none;"></iframe>
+                    <div id="statusMessagePedido" class="status-message"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+ 
+        <!-- BLOQUES DE FILOSOFÍA EN PARALELO (ALINEACIÓN PERFECTA) -->
+<!-- BLOQUES DE FILOSOFÍA EN PARALELO (ALINEACIÓN PERFECTA Y COMPRIMIDA) -->
+        <div class="twin-banners-grid">
+            
+            <!-- BANNER TOO GOOD TO GO (IZQUIERDA) -->
+            <div class="tgtg-shortcut-banner">
+                <img src="imágenes/too-good-to-go.jpg" alt="Logo Too Good To Go" class="tgtg-shortcut-logo">
+                
+                <div class="card-text-filler">
+                    <!-- Destacado con marco tipo "píldora" y color corporativo -->
+                    <div style="margin-bottom: 10px;">
+                        <h3 style="font-size: 15px; color: var(--forest); font-family: 'Georgia', serif; font-weight: 700; background-color: var(--forest-soft); border: 1px solid #cbd5e1; padding: 5px 14px; border-radius: 20px; display: inline-block; margin: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">Compromiso con el Medio Ambiente</h3>
+                    </div>
+                    <!-- Texto en color #b45309 solicitado -->
+                    <h4 style="font-size: 14.5px; color: #b45309; font-weight: 700; margin-bottom: 8px; margin-top: 0;">Nada se tira, todo se aprovecha</h4>
+                    <p style="font-size: 13px; margin-bottom: 0;">Ofrecemos el excedente de comida elaborada durante el día a precios muy reducidos para luchar contra el desperdicio.</p>
+                </div>
+                
+                <a href="#banner-maestro-tgtg" class="tgtg-shortcut-link twin-btn-strict">INFÓRMATE AQUÍ</a>
+            </div>
+
+            <!-- BANNER TIENDA + ALÉRGENOS (DERECHA) -->
+            <div class="store-preview-box">
+                <img src="imágenes/tienda.jpg" alt="Local Como en Kasas" class="store-thumb">
+                
+                <div class="card-text-filler">
+                    <!-- Destacado con marco tipo "píldora" y color corporativo -->
+                    <div style="margin-bottom: 10px;">
+                        <span style="font-size: 15px; font-weight: 700; color: var(--forest); font-family: 'Georgia', serif; background-color: var(--forest-soft); border: 1px solid #cbd5e1; padding: 5px 14px; border-radius: 20px; display: inline-block; margin: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">Cocinado hoy para ti</span>
+                    </div>
+                    <span class="store-preview-sub" style="font-size: 13.5px; display: block; line-height: 1.4; margin-bottom: 0;">Nuestra cocina cambia cada día. Utilizamos ingredientes frescos y de temporada. ¡Comprueba qué hemos cocinado hoy antes de hacer tu pedido!</span>
+                </div>
+                
+                <div class="allergens-legal-banner twin-btn-strict" style="padding: 0;">
+                    <button type="button" class="allergens-modal-btn" onclick="toggleModal('allergensModal', true)" style="width: 100%; height: 100%; gap: 10px; justify-content: center;">
+                        <img src="imágenes/alergenos.png" alt="Icono Alérgenos" style="height: 28px;">
+                        <div style="text-align: left; line-height: 1.2;">
+                            <span class="allergens-banner-text-main" style="font-size: 13.5px; text-decoration: none;">Listado de alérgenos</span> 
+                            <span class="allergens-banner-text-sub" style="font-size: 11.5px; display: block; color: var(--text-muted);">(Real Decreto 126/2015)</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+        <div class="block-card" id="cat-sugerencia">
+            <h2>Sugerencia de Hoy</h2>
+            <div id="container-sugerencia" class="sugerencia-hover-block">
+                <p style="font-size:13px; color:var(--text-muted); text-align:center; padding:10px;">Cargando plato del día...</p>
+            </div>
+        </div>
+
+        <div class="block-card" id="cat-frios"><h2>Platos Fríos</h2><div class="items-grid" id="grid-frios"></div></div>
+        <div class="block-card" id="cat-abuela"><h2>Cocina de la Abuela (Principal)</h2><div class="items-grid" id="grid-abuela"></div></div>
+        <div class="block-card" id="cat-bocadillos"><h2>Rápido y Sencillo (Bocadillos)</h2><div class="items-grid" id="grid-bocadillos"></div></div>
+        <div class="block-card" id="cat-bebidas"><h2>Bebidas y Complementos</h2><div class="items-grid" id="grid-bebidas"></div></div>
+
+ 
+
+        <!-- BANNER INFERIOR MASTER TOO GOOD TO GO -->
+        <div class="tgtg-master-card" id="banner-maestro-tgtg">
+            <h2>Compromiso con el Ahorro y el Medio Ambiente</h2>
+            
+            <div class="tgtg-two-col-layout">
+                <div class="tgtg-text-block">
+                    <h4>Nada se tira, todo se aprovecha</h4>
+                    <p>Con el fin de contribuir a la lucha contra el desperdicio de alimentos, ofrecemos el servicio de venta del excedente de comida que se ha elaborado durante el día.</p>
+                    <p><strong>Ahorro / Impacto ambiental:</strong> Esta medida, permite a los usuarios ahorrar dinero, así como reducir las emisiones de gases de efecto invernadero derivadas de tirar comida en buen estado.</p>
+                    
+                    <h4>¿Cómo lo hacemos?</h4>
+                    <div class="tgtg-platform-desc">
+                        <img src="imágenes/too-good-to-go-2.jpg" alt="Icono TGTG" class="tgtg-mini-logo">
+                        <p><strong>Too Good To Go:</strong> Una aplicación móvil y plataforma que conecta a los usuarios con restaurantes, panaderías, supermercados y otros negocios locales para vender su excedente de comida a precios muy reducidos.</p>
+                    </div>
+
+                    <ul class="tgtg-steps-list">
+                        <li><strong>Packs Sorpresa:</strong> A través de esta plataforma, ofrecemos la comida que no se ha vendido durante el día en "packs sorpresa" por un precio muy inferior a su valor original (generalmente entre un tercio o la mitad de su precio real).</li>
+                        <li><strong>Reserva y Recogida:</strong> Los usuarios compran el pack directamente en la app y pasan a recogerlo por nuestro establecimiento, dentro de un horario específico.</li>
+                    </ul>
+
+                    <div class="tgtg-download-row">
+                        <a href="https://tgtg.onelink.me/OGjG/v7buxxw5" target="_blank" class="tgtg-store-btn">
+                            <img src="imágenes/app-store.png" alt="Descargar en App Store">
+                        </a>
+                        <a href="https://tgtg.onelink.me/OGjG/v7buxxw5" target="_blank" class="tgtg-store-btn">
+                            <img src="imágenes/google-play.png" alt="Disponible en Google Play">
+                        </a>
+                        <a href="https://www.toogoodtogo.com/es/find/alcaladehenares/comoenkasas/meal/packsorpresa-147469599487022080" target="_blank" class="tgtg-shop-btn-outline">
+                            <img src="imágenes/too-good-to-go-2.png" alt="Icono TGTG Botón">
+                            Solicita tu Pack Sorpresa en TGTG
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tgtg-text-block" style="background-color: #fafafa; padding: 16px; border-radius: var(--radius); border: 1px solid #e5e7eb;">
+                    <img src="imágenes/too-good-to-go-3.jpg" alt="Intercambio Pack Sorpresa Como en Kasas" class="tgtg-main-thumb">
+                    <p style="font-size: 12px; color: var(--forest); text-align: center; margin-top: 8px; margin-bottom: 16px; font-style: italic; font-weight: bold; line-height: 1.3;">
+                        Solicita tu Pack Sorpresa , fácilmente, desde el móvil.
+                    </p>
+
+                    <h3 style="font-size: 14px; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 1px solid #e5e7eb;">¿Cómo funciona Too Good To Go?</h3>
+                    <ul class="tgtg-steps-list">
+                        <li>Descarga la app en App Store, Google Play o Huawei AppGallery.</li>
+                        <li>Date de Alta en la aplicación.</li>
+                        <li>Accede a nuestro "Pack Sorpresa" a través de <a href="https://www.toogoodtogo.com/es/find/alcaladehenares/comoenkasas/meal/packsorpresa-147469599487022080" target="_blank" class="tgtg-inline-link">este enlace</a>, o bien realiza una búsqueda de “Como en Kasas” dentro de la aplicación.</li>
+                        <li>Reserva tu comida y paga a través de la aplicación.</li>
+                        <li>Dirígete a la tienda a la hora de recogida especificada y enseña el recibo en la app.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- VALORACIONES Y OPINIONES -->
+        <div class="block-card" id="seccion-opiniones">
+            <h2>★ Opiniones de Clientes</h2>
+            <div class="opinions-header-score">
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <div class="stars-row-flex_custom" id="global-stars-box">★★★★★</div>
+                    <span id="global-score-text">Cargando puntuación...</span>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:var(--clay);">Dejanos tu valoración</div>
+            </div>
+
+            <div class="opinions-layout-grid">
+                <div>
+                    <div id="opinions-list-container">
+                        <p style="font-size:13px; color:var(--text-muted); text-align:center; padding:20px;">Cargando valoraciones de clientes...</p>
+                    </div>
+                    
+                    <div class="opinions-pagination-wrap" id="opinions-pagination-ctrls" style="display: none;">
+                        <button type="button" class="pagination-nav-btn" onclick="changeOpinionPage('first')"><<</button>
+                        <button type="button" class="pagination-nav-btn" onclick="changeOpinionPage('prev')"><</button>
+                        <span id="pagination-current-view-text">1 | 1</span>
+                        <button type="button" class="pagination-nav-btn" onclick="changeOpinionPage('next')">></button>
+                        <button type="button" class="pagination-nav-btn" onclick="changeOpinionPage('last')">>></button>
+                    </div>
+                </div>
+
+                <div>
+                    <!-- 👑 FORMULARIO DE OPINIONES OPTIMIZADO (Ruta de Opiniones: 't0Cgon') -->
+                    <form id="opinionForm" 
+                          action="https://script.google.com/macros/s/AKfycbz-_wXPWoVZyI4unPz75SRRvq-s1J05WkxnlQM40EtkLbmsZcCRt7hlbz8cLp8mlA/exec"             
+                          method="POST" 
+                          target="hidden_iframe_opiniones" 
+                          onsubmit="startLoadingFeedbackOpiniones()">
+                        
+                        <div style="margin-bottom:8px;">
+                            <label style="font-size:13px; font-weight:600; display:block; margin-bottom:4px;">Tu Nombre</label>
+                        </div>
+                        <input type="text" id="opinion-name" name="nombre" class="input-opinion-field" placeholder="Escribe aquí tu nombre" required>
+                        
+                        <div style="margin-bottom:8px;">
+                            <label style="font-size:13px; font-weight:600; display:block; margin-bottom:4px;">Tu Puntuación</label>
+                        </div>
+                        <div class="interactive-stars-selector" id="star-selector-wrap">
+                            <span class="star-item selected" data-value="1">★</span>
+                            <span class="star-item selected" data-value="2">★</span>
+                            <span class="star-item selected" data-value="3">★</span>
+                            <span class="star-item selected" data-value="4">★</span>
+                            <span class="star-item selected" data-value="5">★</span>
+                        </div>
+                        
+                        <input type="hidden" id="opinion-stars-value" name="estrellas" value="5">
+                        
+                        <div style="margin-bottom:8px;">
+                            <label style="font-size:13px; font-weight:600; display:block; margin-bottom:4px;">Mensaje de Opinión</label>
+                        </div>
+                        <textarea id="opinion-message" name="mensaje" class="input-opinion-field" style="min-height:100px; resize:vertical;" placeholder="Escribe aquí tu opinión sobre nuestra comida casera..." required></textarea>
+                        
+                        <button type="submit" id="opinion-submit-btn" class="btn-submit-opinion">Enviar Opinión</button>
+                    </form>
+
+                    <iframe name="hidden_iframe_opiniones" id="hidden_iframe_opiniones" style="display:none;"></iframe>
+
+                    <div id="statusMessageOpiniones" class="status-message"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+       <!-- ACORDEÓN FAQs -->
+        <div class="block-card" id="seccion-faqs" style="padding:0; background:none; border:none; box-shadow:none;">
+            <button type="button" class="master-faq-trigger-btn" onclick="toggleMasterFaqBlock(this)">
+                <span>❓ Preguntas Frecuentes (FAQs) — Haz clic para resolver tus dudas.</span>
+                <span class="master-faq-icon">▼</span>
+            </button>
+            
+            <div class="master-faq-inner-wrapper">
+                <div style="background-color: var(--card-bg); border: 1px solid var(--border-card); border-radius: var(--radius); padding: 20px;">
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Hay un importe mínimo para los pedidos?</button><div class="faq-content-answer">No hay un pedido mínimo, se puede realizar por cualquier importe.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Tenéis opciones para alérgenos o dietas especiales?</button><div class="faq-content-answer">Por supuesto, para ello te recomendamos que nos o llámanos al 604 983 712para poder ofrecerte la mejor option.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Con cuánta antelación debo hacer mi encargo para recoger?</button><div class="faq-content-answer">Elaboramos todos nuestros platos a diario con ingredientes frescos, por lo que te recomendamos hacer tu pedido a través de la web con al menos 30 o 45 minutos de antelación. Así nos aseguramos de tenerlo todo listo en tu franja horaria elegida y recogerás tu comida sin un solo minuto de espera.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿La comida se entrega caliente o lista para calentar?</button><div class="faq-content-answer">Por normativa de seguridad alimentaria y para conservar la máxima calidad de las texturas, nuestros platos para recoger se entregan templados o refrigerados en envases aptos para microondas. Solo necesitarás darles un golpe de calor de 1 o 2 minutos en casa para disfrutarlos como recién salidos de nuestra cocina.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Qué formas de pago aceptáis para los pedidos de recogida?</button><div class="faq-content-answer">Para tu total comodidad al recoger en nuestra tienda de Alcalá de Henares, puedes pagar en efectivo, con tarjeta de crédito/débito o mediante Bizum. Si realizas tu pedido para recoger a través de WhatsApp, el pago se gestionará directamente al recibir el encargo en el local.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Se puede modificar o cancelar un pedido una vez enviado?</button><div class="faq-content-answer">Entendemos que los planes cambian. Si necesitas añadir un plato, modificar la hora de recogida o cancelar tu encargo, escrébenos o llámanos lo antes posible al 604 983 712. Si tu pedido aún no ha entrado en cocina, lo gestionaremos en el acto sin ningún inconveniente.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Hacéis menús especiales para eventos o grupos?</button><div class="faq-content-answer">Sí, por supuesto, pero para ello es recomendable llamarnos previamente o acudir a nuestro establecimiento para ser atendido adecuadamente.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Cómo sé cuándo debo pasar a recogerlo?</button><div class="faq-content-answer">Recibirás una notificación por WhatsApp en tu teléfono móvil indicando que tu pedido está "Listo para recoger".</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Puede otra persona recoger el pedido por mí?</button><div class="faq-content-answer">Sí. Solo necesita presentar el número de pedido y el nombre del titular al llegar al establecimiento.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Cómo se envasa la comida para llevar?</button><div class="faq-content-answer">Se utilizan envases térmicos y sellados diseñados específicamente para el tipo de alimento (por ejemplo, cajas especiales para soups o alimentos calientes) para evitar derrames y mantener la temperatura.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Qué ocurre si la comida está en mal estado o falta algún plato?</button><div class="faq-content-answer">Debes reportar el incidente inmediatamente acudiendo a nuestra tienda. Una vez evaluado el estado de los alimentos se procederá a su compensación, reembolso, entrega del mismo pedido original o del producto que se hubiera omitido durante la entrega.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleModal('mapModal', true)">¿Dónde y cómo recojo mi pedido?</button><div class="faq-content-answer">Una vez confirmed, puedes pasar a recogerlo por nuestro establecimiento en la dirección indicada. Notifica al personal tu número de pedido o nombre asociado.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleModal('mapModal', true)">¿Tiene algún costo el servicio de recogida?</button><div class="faq-content-answer">No, la recogida en tienda es totalmente gratuita.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Puedo realizar el pedido para recogerlo a una hora concreta?</button><div class="faq-content-answer">Sí, para ello dispones de una herramienta en la web que te permite seleccionar un rango de horas para realizar la recogida.</div></div>
+                    <div class="faq-item-row"><button type="button" class="faq-trigger-title" onclick="toggleFaqAccordion(this)">¿Cómo puedo poner una reclamación?</button><div class="faq-content-answer">En nuestras instalaciones dispones de un libro de reclamaciones.</div></div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h2>Contacto</h2>
+                <p><span class="icon-white-filter">📞</span> Teléfono: <strong>604 983 712</strong></p>
+                <p><a href="https://wa.me/34659418830" target="_blank" class="btn-footer-wa">💬 Escríbenos por WhatsApp</a></p>
+                
+                <h2>Nuestra Tienda</h2>
+                <p>🖈 Cl. Alejo Carpentier 13,<br>     28806 (Alcalá de Henares, Madrid)</p>
+                <div class="footer-links-inline">
+                    <button type="button" class="maps-link" onclick="toggleModal('mapModal', true)">Ver en Google Maps</button>
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE CONTACTO (Ruta de Contacto: 'HHeVGlJpKM') -->
+            <div class="footer-section">
+                <h2>Contacta</h2>
+                <form id="contactForm" 
+                      action="https://script.google.com/macros/s/AKfycbx2pv6D1BhjkB-xZRR2ByAJ4q95o6Z_oULhhyiN9kAezn9VZm1BS-0H-jVeGBlJpKM/exec" 
+                      method="POST" 
+                      target="hidden_iframe" 
+                      onsubmit="startLoadingFeedback()">
+                    
+                    <div class="form-row-parallel">
+                        <div class="form-group">
+                            <label for="form-name">Nombre</label>
+                            <input type="text" id="form-name" name="nombre" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-phone">Teléfono</label>
+                            <input type="tel" id="form-phone" name="telefono" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-email">Email</label>
+                        <input type="email" id="form-email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-message">Mensaje</label>
+                        <textarea id="form-message" name="mensaje" class="form-control" required></textarea>
+                    </div>
+                    
+                    <label class="form-checkbox-label">
+                        <input type="checkbox" id="form-privacy" onchange="toggleSubmitButton()">
+                        <span>Acepto la <button type="button" onclick="toggleModal('legalModal', true)">política de privacidad</button></span>
+                    </label>
+                    <button type="submit" id="form-submit-btn" class="btn-submit-form" disabled>Enviar Mensaje</button>
+                </form>
+                
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                <div id="statusMessage" class="status-message"></div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Como en Kasas. Todos los derechos reservados.</p>
+            <button type="button" class="btn-legal-popup-trigger" onclick="toggleModal('legalModal', true)">Aviso Legal, Política de Privacidad y de Cookies</button>
+        </div>
+    </footer>
+
+</div>
+
+<!-- MODAL ALÉRGENOS -->
+<div id="allergensModal" class="map-modal">
+    <div class="modal-body legal-large-body">
+        <button class="modal-close" onclick="toggleModal('allergensModal', false)">X</button>
+        <div class="legal-scroller-content">
+            <h1 style="font-family:'Georgia', serif; color:var(--forest); font-size:20px; border-bottom:2px solid var(--clay); padding-bottom:8px; margin-bottom:15px;">Guía Oficial de Alérgenos  Reglamentarios</h1>
+            <p style="font-size:13px; margin-bottom:12px;">En cumplimiento del <strong>Real Decreto 126/2015</strong> y el Reglamento (UE) nº 1169/2011, detallamos a continuación los iconos informativos de declaración obligatoria presentes en nuestra cocina:</p>
+            <table class="allergen-legend-table">
+                <thead><tr><th style="width: 20%; text-align: center;">Icono</th><th>Grupo de Alérgeno Obligatorio</th></tr></thead>
+                <tbody>
+                    <tr><td class="allergen-icon-cell">🌾</td><td><strong>Gluten</strong></td></tr>
+                    <tr><td class="allergen-icon-cell">🥛</td><td><strong>Lactosa / Lácteos</strong></td></tr>
+                    <tr><td class="allergen-icon-cell">🥚</td><td><strong>Huevo</strong></td></tr>
+                    <tr><td class="allergen-icon-cell">🐟</td><td><strong>Pescado</strong></td></tr>
+                    <tr><td class="allergen-icon-cell">🦀</td><td><strong>Crustáceos</strong> (Langostinos, gambas...)</td></tr>
+                    <tr><td class="allergen-icon-cell">🐚</td><td><strong>Moluscos</strong> (Mejillones, calamares...)</td></tr>
+                    <tr><td class="allergen-icon-cell">🌰</td><td><strong>Frutos de cáscara</strong> (Nueces, almendras...)</td></tr>
+                    <tr><td class="allergen-icon-cell">🥜</td><td><strong>Cacahuetes</strong></td></tr>
+                    <tr><td class="allergen-icon-cell">🫘</td><td><strong>Soja</strong></td></tr>
+                    <tr><td class="allergen-icon-cell">🌿</td><td><strong>Apio</strong></td></tr>
+                    <tr><td class="allergen-icon-cell">🫙</td><td><strong>Mostaza</strong></td></tr>
+                    <tr><td class="allergen-icon-cell">🌾</td><td><strong>Sésamo</strong></td></tr>
+                    <tr><td class="allergen-icon-cell">🌱</td><td><strong>Altramuces</strong></td></tr>
+                    <tr><td class="allergen-icon-cell">🍷</td><td><strong>Dióxido de azufre y Sulfitos</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL GOOGLE MAPS -->
+<div id="mapModal" class="map-modal">
+    <div class="modal-body">
+        <button class="modal-close" onclick="toggleModal('mapModal', false)">X</button>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.934898144074!2d-3.346633684602283!3d40.52028607935311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42496790000001%3A0x6e788e00180491cb!2sCalle%20Alejo%20Carpentier%2C%2013%2C%2028806%20Alcal%C3%A1%20de%20Henares%2C%20Madrid!5e0!3m2!1ses!2ses!4v1670000000000!5m2!1ses!2ses" width="100%" height="320" style="border:0; border-radius: 4px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+<!-- MODAL LEGAL -->
+<div id="legalModal" class="map-modal">
+    <div class="modal-body legal-large-body">
+        <button class="modal-close" onclick="toggleModal('legalModal', false)">X</button>
+        <div class="legal-scroller-content">
+            <h1 style="font-family:'Georgia', serif; color:var(--forest); font-size:22px; border-bottom:2px solid var(--clay); padding-bottom:8px; margin-bottom:15px;">Información Legal Obligatoria</h1>
+            <h2>Aviso Legal</h2>
+            <h3>Identificación y Titularidad</h3>
+            <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico, el Titular expone sus datos identificativos:</p>
+            <ul>
+                <li><strong>Titular:</strong> Sheila</li>
+                <li><strong>NIF:</strong> 120</li>
+                <li><strong>Domicilio:</strong> Cl. Alejo Carpentier, 13 - 28806 Alcalá de Henares (MADRID)</li>
+                <li><strong>Correo electrónico:</strong> kasascheesecake@gmail.com</li>
+                <li><strong>Sitio Web:</strong> https://comoenkasas.es</li>
+            </ul>
+            <h3>Finalidad</h3>
+            <p>La finalidad del sitio web es informar de productos y servicios, y gestionar las peticiones de contacto.</p>
+            <h3>Condiciones de Uso</h3>
+            <p>La utilización del sitio web te otorga la condición de Usuario, e implica la aceptación completa de todas las cláusulas y condiciones del Aviso Legal. Si no estás conforme con todas y cada una de estas cláusulas y condiciones te abstendrás de utilizar este sitio web. El acceso a este sitio web no supone, en modo alguno, el inicio de una relación comercial con el titular.</p>
+            <p>Te obligas y comprometes a NO utilizar cualquiera de los contenidos del sitio web con fines o efectos ilícitos, prohibidos en este Aviso Legal o por la legislación vigente. El titular se reserva el derecho de retirar todos aquellos contenidos que vulneren la legislación vigente.</p>
+            <h3>Medidas de seguridad</h3>
+            <p>Los datos personales que facilites pueden ser almacenados en bases de datos automatizadas o no, cuya titularidad corresponds en exclusiva a el titular, que asume todas las medidas de índole técnica, organizativa y de seguridad de acuerdo con lo establecido en la normativa vigente.</p>
+            <h3>Propiedad intelectual e industrial</h3>
+            <p>Todos los derechos están reservados. Queda expresamente prohibida la reproducción, almacenaje permanente y la difusión de los contenidos para finalidad pública o comercial sin el consentimiento previo expreso y por escrito.</p>
+
+            <h2>Política de privacidad</h2>
+            <p>Te informamos sobre nuestra Política de Privacidad respecto del tratamiento y protección de los datos de carácter personal de los usuarios de acuerdo con la LOPD GDD y el Reglamento (UE) 2016/679 (RGPD).</p>
+            <h3>Derechos</h3>
+            <p>Tienes derecho a solicitar el acceso a los datos almacenados, rectificación o cancelación, limitación de su tratamiento y oposición al tratamiento. Para ejercitar tus derechos tienes que enviar un correo electrónico a <em>kasascheesecake@gmail.com</em> junto con una prueba válida en derecho (fotocopia del D.N.I. o equivalente).</p>
+            <h3>Seguridad y Destinatarios</h3>
+            <p>El sitio Web está alojado en <strong>www.dinahosting.com</strong>, garantizando las medidas de seguridad del sector. Sus datos no serán cedidos a terceras organizaciones salvo obligación legal.</p>
+
+            <h2>Política de Cookies</h2>
+            <p>Este sitio Web utiliza cookies. Una cookie es un fichero que se descarga en tu ordenador al entrar a determinadas páginas web para almacenar y recuperar información sobre tus hábitos de navegación. Puedes aceptar, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones de tu propio navegador.</p>
+        </div>
+    </div>
+</div>
+
+<!-- BOTÓN FLOTANTE "VOLVER ARRIBA" -->
+<button id="backToTop" class="scroll-top-btn" onclick="scrollToTop()">▲</button>
+
+<script>
+    const SHEET_ID = "1Ow2gbiIjkod8KsqS-Vhp73Ux7kP0O9U8D0agsfepeYs";
+    
+    const URL_CARTA = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?gid=0&tqx=responseHandler:callbackCarta`;
+    const URL_OPINIONES = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=Opiniones&tqx=responseHandler:callbackOpiniones`;
+
+    let listadoPlatos = [];
+    let shoppingCart = [];
+    let nombreMenuHoy = ""; let precioMenuHoy = 0; let disponibleMenuHoy = true;
+    let notaEstrellasSeleccionada = 5; let codigoOrdenActual = "";
+
+    let listadoOpinionesCompleto = [];
+    let paginaActualOpiniones = 1;
+    const TOTAL_OPINIONES_POR_PAGINA = 3;
+
+    const MAPA_ALERGENOS = {
+        "gluten": "🌾", "lactosa": "🥛", "huevo": "🥚", "pescado": "🐟",
+        "crustáceos": "🦀", "moluscos": "🐚", "frutos de cáscara": "🌰",
+        "cacahuetes": "🥜", "soja": "🫘", "apio": "🌿", "mostaza": "🫙",
+        "sésamo": "🌾", "altramuces": "🌱", "sulfitos": "🍷"
+    };
+
+    function generarCodigoOrdenUnico() {
+        if (codigoOrdenActual !== "") return codigoOrdenActual;
+        const numAleatorio = Math.floor(1000 + Math.random() * 9000);
+        codigoOrdenActual = `CK-${numAleatorio}`;
+        return codigoOrdenActual;
+    }
+
+    function cargarTodoDesdeGoogle() {
+        const sc1 = document.createElement('script'); sc1.src = URL_CARTA; document.body.appendChild(sc1);
+        const sc2 = document.createElement('script'); sc2.src = URL_OPINIONES; document.body.appendChild(sc2);
+    }
+
+    // CALLBACK 1: CARTA
+    function callbackCarta(response) {
+        if (!response || !response.table) return;
+        const rows = response.table.rows;
+        const platosProcesados = [];
+
+        rows.forEach(row => {
+            const category = row.c[0] ? row.c[0].v : '';
+            const name = row.c[1] ? row.c[1].v : '';
+            const desc = row.c[2] ? row.c[2].v : '';
+            const price = row.c[3] ? parseFloat(row.c[3].v) : 0;
+            const foto = row.c[4] ? row.c[4].v : 'sugerencia.jpg';
+            let isAvailable = true;
+
+            if (row.c[5]) {
+                if (typeof row.c[5].v === 'boolean') { isAvailable = row.c[5].v; }
+                else {
+                    let strVal = row.c[5].f ? row.c[5].f.toString().toUpperCase().trim() : row.c[5].v.toString().toUpperCase().trim();
+                    isAvailable = (strVal === 'SÍ' || strVal === 'SI' || strVal === 'TRUE' || strVal === 'V');
+                }
+            }
+            
+            const txtAlergenos = (row.c[6] && row.c[6].v !== null) ? row.c[6].v.toString().trim() : '';
+
+            if (!name) return;
+            platosProcesados.push({
+                category: category.toString().trim(), name: name.toString().trim(), desc: desc.toString().trim(), price: price, foto: foto.toString().trim(), available: isAvailable, alergenos: txtAlergenos
+            });
+        });
+
+        listadoPlatos = platosProcesados;
+        renderizarCartaUI();
+        refreshCartUI();
+    }
+
+    // CALLBACK 2: OPINIONES
+    function callbackOpiniones(response) {
+        if (!response || !response.table) return;
+        listadoOpinionesCompleto = response.table.rows;
+        paginaActualOpiniones = 1; 
+        renderizarOpinionesPaginadas();
+    }
+
+    window.callbackCarta = callbackCarta;
+    window.callbackOpiniones = callbackOpiniones;
+
+function renderizarOpinionesPaginadas() {
+    const listContainer = document.getElementById('opinions-list-container');
+    const pagCtrls = document.getElementById('opinions-pagination-ctrls');
+
+    const opinionesValidas = listadoOpinionesCompleto.filter(row => {
+        if (!row.c || !row.c[1] || !row.c[1].v) return false;
+        var estadoAprobado = (row.c[3] && row.c[3].v) ? row.c[3].v.toString().trim().toUpperCase() : "";
+        return estadoAprobado === "SI";
+    });
+    
+    const totalOpiniones = opinionesValidas.length;
+
+    if (totalOpiniones === 0) {
+        listContainer.innerHTML = `<p style="font-size:13px; color:var(--text-muted); text-align:center; padding:10px;">¡Sé el primero en dejar una opinión sobre nuestros platos!</p>`;
+        document.getElementById('global-score-text').innerHTML = `Valoración: <span class="score-number-highlight">5.00</span> sobre 5 <span class="score-total-muted">(0 valoraciones)</span>`;
+        pagCtrls.style.display = "none";
+        return;
+    }
+
+    let totalEstrellas = 0;
+    opinionesValidas.forEach(row => { const estrellas = row.c[2] ? parseInt(row.c[2].v) : 5; totalEstrellas += estrellas; });
+    const notaMedia = totalEstrellas / totalOpiniones;
+    
+    document.getElementById('global-score-text').innerHTML = `Valoración: <span class="score-number-highlight">${notaMedia.toFixed(2)}</span> sobre 5 <span class="score-total-muted">(${totalOpiniones} valoraciones)</span>`;
+    document.getElementById('global-stars-box').innerText = "★".repeat(Math.round(notaMedia)) + "☆".repeat(5 - Math.round(notaMedia));
+
+    const totalPaginas = Math.ceil(totalOpiniones / TOTAL_OPINIONES_POR_PAGINA);
+    if (paginaActualOpiniones > totalPaginas) paginaActualOpiniones = totalPaginas;
+    if (paginaActualOpiniones < 1) paginaActualOpiniones = 1;
+
+    const inicio = (paginaActualOpiniones - 1) * TOTAL_OPINIONES_POR_PAGINA;
+    const fin = inicio + TOTAL_OPINIONES_POR_PAGINA;
+    const opinionesPagina = opinionesValidas.slice(inicio, fin);
+
+    let htmlAcumulado = "";
+    opinionesPagina.forEach(row => {
+        const nombre = row.c[0] ? row.c[0].v : 'Cliente Anónimo';
+        const mensaje = row.c[1] ? row.c[1].v : '';
+        const estrellas = row.c[2] ? parseInt(row.c[2].v) : 5;
+        let estrellasDibujadas = "★".repeat(estrellas) + "☆".repeat(5 - estrellas);
+
+        htmlAcumulado += `
+            <div class="single-opinion-bubble">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                    <strong>${nombre.toString().toLowerCase()} dijo:</strong>
+                    <span style="color:#fbbf24; font-size:13px;">${estrellasDibujadas}</span>
+                </div>
+                <p>"${mensaje.toString()}"</p>
+            </div>
+        `;
+    });
+
+    listContainer.innerHTML = htmlAcumulado;
+    document.getElementById('pagination-current-view-text').innerText = `${paginaActualOpiniones} | ${totalPaginas}`;
+    pagCtrls.style.display = totalPaginas > 1 ? "flex" : "none";
+}
+
+function changeOpinionPage(action) {
+    const opinionesValidas = listadoOpinionesCompleto.filter(row => {
+        if (!row.c || !row.c[1] || !row.c[1].v) return false;
+        var estadoAprobado = (row.c[3] && row.c[3].v) ? row.c[3].v.toString().trim().toUpperCase() : "";
+        return estadoAprobado === "SI";
+    });
+    
+    const totalPaginas = Math.ceil(opinionesValidas.length / TOTAL_OPINIONES_POR_PAGINA);
+
+    if (action === 'first') paginaActualOpiniones = 1;
+    else if (action === 'prev' && paginaActualOpiniones > 1) paginaActualOpiniones--;
+    else if (action === 'next' && paginaActualOpiniones < totalPaginas) paginaActualOpiniones++;
+    else if (action === 'last') paginaActualOpiniones = totalPaginas;
+
+    renderizarOpinionesPaginadas();
+    document.getElementById('seccion-opiniones').scrollIntoView({ behavior: 'smooth' });
+}
+
+    function obtenerHtmlAlergenos(stringAlergenos) {
+        if (!stringAlergenos) return "";
+        let htmlIconos = `<div class="item-allergens-wrap">`;
+        const partes = stringAlergenos.split(","); let tieneIconos = false;
+        partes.forEach(p => {
+            const clave = p.trim().toLowerCase();
+            if (MAPA_ALERGENOS[clave]) { htmlIconos += `<span title="${p.trim()}">${MAPA_ALERGENOS[clave]}</span>`; tieneIconos = true; }
+        });
+        htmlIconos += `</div>`; return tieneIconos ? htmlIconos : "";
+    }
+
+    
+function renderizarCartaUI() {
+        const sugeBox = document.getElementById('container-sugerencia');
+        const gridFrios = document.getElementById('grid-frios'); 
+        const gridAbuela = document.getElementById('grid-abuela');
+        const gridBocadillos = document.getElementById('grid-bocadillos'); 
+        const gridBebidas = document.getElementById('grid-bebidas');
+
+        sugeBox.innerHTML = ""; gridFrios.innerHTML = ""; gridAbuela.innerHTML = ""; gridBocadillos.innerHTML = ""; gridBebidas.innerHTML = "";
+        let tieneSugerencia = false;
+
+        listadoPlatos.forEach(plato => {
+            const outStockClass = plato.available ? "" : " out-of-stock";
+            const allergensHTML = obtenerHtmlAlergenos(plato.alergenos);
+            
+            // --- NUEVA ESTRUCTURA DE TARJETA ---
+            const itemHTML = `
+                <div class="menu-item${outStockClass}">
+                    <img src="imágenes/${plato.foto}" alt="${plato.name}" class="menu-item-thumb">
+                    <div class="menu-item-main">
+                        <div class="menu-item-name">${plato.name}</div>
+                        <div class="menu-item-desc">${plato.desc}</div>
+                        ${allergensHTML}
+                        <div class="menu-item-action">
+                            <span class="item-price">${plato.price.toFixed(2)} €</span>
+                            <div id="btn-ctrl-${plato.name}"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+if (plato.category.toLowerCase() === 'sugerencia') {
+             tieneSugerencia = true;
+             nombreMenuHoy = plato.name; precioMenuHoy = plato.price; disponibleMenuHoy = plato.available;
+             // Sustituimos la clase base por nuestra versión de 2 columnas
+             sugeBox.innerHTML = itemHTML.replace('class="menu-item', 'class="menu-item sugerencia-card');
+         } else {
+                if (plato.category.toLowerCase().includes('frío') || plato.category.toLowerCase().includes('frio')) { gridFrios.innerHTML += itemHTML; }
+                else if (plato.category.toLowerCase().includes('abuela') || plato.category.toLowerCase().includes('principal')) { gridAbuela.innerHTML += itemHTML; }
+                else if (plato.category.toLowerCase().includes('bocadillo')) { gridBocadillos.innerHTML += itemHTML; }
+                else if (plato.category.toLowerCase().includes('bebida') || plato.category.toLowerCase().includes('pan')) { gridBebidas.innerHTML += itemHTML; }
+            }
+        });
+        
+        if (!tieneSugerencia) sugeBox.innerHTML = `<p style="font-size:12px; color:var(--text-muted); text-align:center;">Hoy no hay ninguna sugerencia fijada en la carta.</p>`;
+    }
+
+
+
+    function changeQty(name, price, amount) {
+        const platoBase = listadoPlatos.find(p => p.name === name); if (platoBase && !platoBase.available) return;
+        generarCodigoOrdenUnico(); const item = shoppingCart.find(i => i.name === name);
+        if (item) { item.qty += amount; if (item.qty <= 0) { shoppingCart = shoppingCart.filter(i => i.name !== name); } } 
+        else if (amount > 0) { shoppingCart.push({ name: name, price: price, qty: 1 }); }
+        if (shoppingCart.length === 0) { codigoOrdenActual = ""; }
+        refreshCartUI();
+    }
+
+    function getBotoneraHTML(name, price, qty) {
+        const escapedName = name.replace(/'/g, "\\'");
+        return qty > 0 ? `
+            <div class="quantity-selector">
+                <button class="btn-qty btn-qty-minus" onclick="changeQty('${escapedName}', ${price}, -1)">-</button>
+                <span class="qty-value">${qty}</span>
+                <button class="btn-qty btn-qty-plus" onclick="changeQty('${escapedName}', ${price}, 1)">+</button>
+            </div>
+        ` : `<button class="btn-add" onclick="changeQty('${escapedName}', ${price}, 1)">Añadir</button>`;
+    }
+
+    function toggleCartDropdownPanel() {
+        document.getElementById('cartDropdownPanel').classList.toggle('open');
+    }
+
+    function vaciarCarritoCompleto() {
+        shoppingCart = [];
+        codigoOrdenActual = "";
+        refreshCartUI();
+        document.getElementById('cartDropdownPanel').classList.remove('open');
+    }
+
+    function refreshCartUI() {
+        shoppingCart = shoppingCart.filter(item => { const platoBase = listadoPlatos.find(p => p.name === item.name); return platoBase ? platoBase.available : true; });
+        let numPlatos = 0; let sumPrecio = 0;
+        
+        const scroller = document.getElementById('cartDropdownScroller');
+        if (shoppingCart.length === 0) {
+            scroller.innerHTML = `<p style="font-size:12.5px; color:var(--text-muted); text-align:center; padding:15px 0;">Tu carrito está vacío. ¡Añade algún plato de nuestra carta!</p>`;
+            document.getElementById('cart-counter').innerText = "0 platos seleccionados ▾";
+        } else {
+            let htmlDesglose = "";
+            shoppingCart.forEach(item => { 
+                numPlatos += item.qty; 
+                sumPrecio += (item.price * item.qty); 
+                
+                htmlDesglose += `
+                    <div class="cart-dropdown-row">
+                        <span><strong>${item.qty}x</strong> ${item.name.toLowerCase()}</span>
+                        <span style="font-weight:700;">${(item.price * item.qty).toFixed(2)} €</span>
+                    </div>
+                `;
+            });
+            scroller.innerHTML = htmlDesglose;
+            document.getElementById('cart-counter').innerText = `${numPlatos} plato(s) seleccionado(s) ▾`;
+        }
+
+        document.getElementById('cart-total').innerText = `${sumPrecio.toFixed(2)} €`;
+
+        listadoPlatos.forEach(plato => {
+            const container = document.getElementById(`btn-ctrl-${plato.name}`);
+            if (container) {
+                if (!plato.available) { container.innerHTML = `<span class="lbl-out-of-stock">Agotado hoy</span>`; } 
+                else { const cartItem = shoppingCart.find(i => i.name === plato.name); container.innerHTML = getBotoneraHTML(plato.name, plato.price, cartItem ? cartItem.qty : 0); }
+            }
+        });
+    }
+
+    // --- NUEVAS FUNCIONES DE PEDIDO --- //
+
+let ultimoCanalPedido = ""; // Variable de control
+
+    function generarTextoCarrito() {
+        let texto = ""; let sumPrecio = 0; let textoExcelArr = [];
+        shoppingCart.forEach(item => {
+            sumPrecio += (item.price * item.qty);
+            texto += `• ${item.qty}x ${item.name} (${(item.price * item.qty).toFixed(2)} €)\n`;
+            textoExcelArr.push(`• ${item.qty}x ${item.name}`); // Formato limpio para Sheets
+        });
+        return { texto: texto, textoExcel: textoExcelArr.join(" | "), sumPrecio: sumPrecio.toFixed(2) };
+    }
+
+    function validarCamposPedido(requiereEmail) {
+        if (shoppingCart.length === 0) { 
+            alert("⚠️ Tu carrito está vacío. Añade algún plato antes de hacer el pedido."); 
+            return false; 
+        }
+        const nombre = document.getElementById('pedido-nombre').value.trim();
+        if (nombre === "") { alert("⚠️ Por favor, indícanos tu nombre para el pedido."); return false; }
+        
+        const telefono = document.getElementById('pedido-telefono').value.trim();
+        if (telefono === "") { alert("⚠️ Por favor, indícanos un teléfono de contacto."); return false; }
+        
+        if (requiereEmail) {
+            const email = document.getElementById('pedido-email').value.trim();
+            if (email === "" || !email.includes('@')) { alert("⚠️ Introduce un email válido para enviarte la confirmación del pedido."); return false; }
+        }
+        return true;
+    }
+
+    function enviarPedidoWhatsApp() {
+        if (!validarCamposPedido(false)) return;
+        ultimoCanalPedido = "Whatsapp";
+        
+        const nombre = document.getElementById('pedido-nombre').value.trim();
+        const telefono = document.getElementById('pedido-telefono').value.trim();
+        const email = document.getElementById('pedido-email').value.trim();
+        const comentarios = document.getElementById('pedido-comentarios').value.trim();
+        const hora = document.getElementById('pickup-time-select').value;
+        const ticketID = codigoOrdenActual || "CK-NUEVO";
+        const carrito = generarTextoCarrito();
+
+        // 1. Enviar datos al servidor silenciosamente para registro
+        document.getElementById('h-pedido-nombre').value = nombre;
+        document.getElementById('h-pedido-telefono').value = telefono;
+        document.getElementById('h-pedido-email').value = email;
+        document.getElementById('h-pedido-comentarios').value = comentarios;
+        document.getElementById('h-pedido-hora').value = hora;
+        document.getElementById('h-pedido-ticketID').value = ticketID;
+        document.getElementById('h-pedido-detalle').value = carrito.texto;
+        document.getElementById('h-pedido-total').value = carrito.sumPrecio;
+        document.getElementById('h-pedido-canal').value = "Whatsapp";
+        document.getElementById('h-pedido-excel').value = carrito.textoExcel;
+        
+        document.getElementById('pedidoHiddenForm').submit();
+        
+        // 2. Abrir WhatsApp al cliente
+        let waText = `🏪 *¡NUEVO ENCARGO PARA RECOGER!*\n🆔 *Orden:* #${ticketID}\n🕒 *Hora de recogida:* ${hora}\n────────────────────\n`;
+        waText += `*Nombre:* ${nombre}\n`;
+        waText += `*Teléfono:* ${telefono}\n`;
+        if (comentarios !== "") waText += `*Comentarios:* ${comentarios}\n`;
+        if (email !== "") waText += `*Email:* ${email}\n`;
+        waText += `────────────────────\n\n`;
+        waText += carrito.texto;
+        waText += `\n────────────────────\n💰 *Total Estimado: ${carrito.sumPrecio} €*\n\n¿Me lo podéis confirmar y preparar? ¡Muchas gracias!`;
+        
+        window.open(`https://wa.me/34659418830?text=${encodeURIComponent(waText)}`, '_blank');
+        setTimeout(() => { vaciarCarritoCompleto(); }, 3000);
+    }
+
+    function enviarPedidoCorreo() {
+        if (!validarCamposPedido(true)) return;
+        ultimoCanalPedido = "Email";
+        
+        const carrito = generarTextoCarrito();
+        const ticketID = codigoOrdenActual || "CK-NUEVO";
+        
+        document.getElementById('h-pedido-nombre').value = document.getElementById('pedido-nombre').value.trim();
+        document.getElementById('h-pedido-telefono').value = document.getElementById('pedido-telefono').value.trim();
+        document.getElementById('h-pedido-email').value = document.getElementById('pedido-email').value.trim();
+        document.getElementById('h-pedido-comentarios').value = document.getElementById('pedido-comentarios').value.trim();
+        document.getElementById('h-pedido-hora').value = document.getElementById('pickup-time-select').value;
+        document.getElementById('h-pedido-ticketID').value = ticketID;
+        document.getElementById('h-pedido-detalle').value = carrito.texto;
+        document.getElementById('h-pedido-total').value = carrito.sumPrecio;
+        document.getElementById('h-pedido-canal').value = "Email";
+        document.getElementById('h-pedido-excel').value = carrito.textoExcel;
+        
+        const btn = document.getElementById('btn-pedido-correo');
+        const statusBox = document.getElementById('statusMessagePedido');
+        
+        btn.disabled = true;
+        btn.innerText = "Procesando...";
+        statusBox.style.display = "none";
+        
+        document.getElementById('pedidoHiddenForm').submit();
+        setTimeout(googleScriptCallbackPedido, 1500);
+    }
+
+    function googleScriptCallbackPedido() {
+        const btn = document.getElementById('btn-pedido-correo');
+        const statusBox = document.getElementById('statusMessagePedido');
+        if (statusBox.style.display === "block") return;
+        
+        statusBox.className = "status-message success";
+        if (ultimoCanalPedido === "Email") {
+            statusBox.innerText = "✅ Pedido enviado. Revisa tu email para ver la confirmación.";
+            btn.innerText = "¡Enviado!";
+        } else {
+            statusBox.innerText = "✅ Pedido registrado correctamente.";
+        }
+        statusBox.style.display = "block";
+        
+        if (ultimoCanalPedido === "Email") {
+            setTimeout(() => { vaciarCarritoCompleto(); }, 3000);
+        }
+    }
+
+    window.addEventListener('click', function(e) {
+        const panel = document.getElementById('cartDropdownPanel');
+        const counter = document.getElementById('cart-counter');
+        if (panel && !panel.contains(e.target) && e.target !== counter) {
+            panel.classList.remove('open');
+        }
+    });
+
+    function checkStoreStatus() {
+        const now = new Date(); const day = now.getDay(); const hour = now.getHours(); const mins = now.getMinutes(); const currentTimeInMins = (hour * 60) + mins;
+        let isOpen = false; const startWeekInMins = (10 * 60) + 30; const endWeekInMins = 20 * 60; const startSunInMins = 11 * 60; const endSunInMins = 16 * 60;          
+        if (day >= 1 && day <= 6) { if (currentTimeInMins >= startWeekInMins && currentTimeInMins < endWeekInMins) isOpen = true; } 
+        else if (day === 0) { if (currentTimeInMins >= startSunInMins && currentTimeInMins < endSunInMins) isOpen = true; }
+
+        const badge = document.getElementById('shop-status');
+        if (isOpen) { badge.className = "status-badge-premium badge-open"; badge.innerHTML = `<span class="status-dot"></span> Abierto ahora`; } 
+        else { badge.className = "status-badge-premium badge-closed"; badge.innerHTML = `<span class="status-dot"></span> Cerrado ahora`; }
+    }
+
+    function toggleSubmitButton() { document.getElementById('form-submit-btn').disabled = !document.getElementById('form-privacy').checked; }
+
+    function startLoadingFeedback() {
+        const submitBtn = document.getElementById('form-submit-btn');
+        const statusBox = document.getElementById('statusMessage');
+
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Conectando con el servidor de correo...";
+        statusBox.style.display = "none";
+        
+        setTimeout(googleScriptCallback, 1200);
+    }
+
+    function googleScriptCallback() {
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('form-submit-btn');
+        const statusBox = document.getElementById('statusMessage');
+
+        if (statusBox.style.display === "block") return;
+
+        statusBox.className = "status-message success";
+        statusBox.innerText = "✉️ ¡Mensaje enviado con éxito!";
+        statusBox.style.display = "block";
+
+        form.reset();
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Enviar Mensaje";
+    }
+
+    function toggleModal(idModal, show) { document.getElementById(idModal).classList.toggle('open', show); }
+    function toggleMasterFaqBlock(btnElement) { btnElement.parentElement.classList.toggle('faq-master-opened'); }
+    function toggleFaqAccordion(buttonelement) { const row = buttonelement.parentElement; const isActive = row.classList.contains('active'); row.parentElement.querySelectorAll('.faq-item-row').forEach(r => r.classList.remove('active')); if (!isActive) row.classList.add('active'); }
+    function scrollToTop() { window.scrollTo({ top: 0, behavior: "smooth" }); }
+
+    const backToTopBtn = document.getElementById("backToTop");
+    window.onscroll = function() { if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { backToTopBtn.classList.add("show"); } else { backToTopBtn.classList.remove("show"); } };
+
+    const estrellasSelectorasNuevas = document.querySelectorAll('#star-selector-wrap .star-item');
+    estrellasSelectorasNuevas.forEach(star => {
+        star.addEventListener('click', () => {
+            const valorClick = parseInt(star.getAttribute('data-value')); 
+            notaEstrellasSeleccionada = valorClick;
+            document.getElementById('opinion-stars-value').value = valorClick;
+            
+            estrellasSelectorasNuevas.forEach(s => { 
+                const valS = parseInt(s.getAttribute('data-value')); 
+                s.classList.toggle('selected', valS <= valorClick); 
+            });
+        });
+    });
+
+    function startLoadingFeedbackOpiniones() {
+        const submitBtn = document.getElementById('opinion-submit-btn');
+        const statusBox = document.getElementById('statusMessageOpiniones');
+
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Enviando tu valoración al servidor...";
+        statusBox.style.display = "none";
+        
+        setTimeout(googleScriptCallbackOpiniones, 1200);
+    }
+
+    function googleScriptCallbackOpiniones() {
+        const form = document.getElementById('opinionForm');
+        const submitBtn = document.getElementById('opinion-submit-btn');
+        const statusBox = document.getElementById('statusMessageOpiniones');
+
+        if (statusBox.style.display === "block") return;
+
+        statusBox.className = "status-message success";
+        statusBox.innerText = "✉️ ¡Valoración enviada con éxito! Queda pendiente de moderación.";
+        statusBox.style.display = "block";
+
+        form.reset();
+        notaEstrellasSeleccionada = 5;
+        document.getElementById('opinion-stars-value').value = "5";
+        estrellasSelectorasNuevas.forEach(s => s.classList.add('selected'));
+        
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Enviar Opinión";
+    }
+
+    cargarTodoDesdeGoogle(); checkStoreStatus(); setInterval(checkStoreStatus, 30000);
+</script>
+
+</body>
+</html>
